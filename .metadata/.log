@@ -1,0 +1,88 @@
+!SESSION 2019-11-20 19:00:19.482 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.4
+java.vendor=Ubuntu
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/runner
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:00:35.168
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:00:36.142
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:00:36.380
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:00:36.394
+!MESSAGE Initializing Java Language Server 0.21.0.201806152234
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:00:36.799
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:00:37.447
+!MESSAGE Creating the default Java project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:00:41.192
+!MESSAGE Finished creating the default Java project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:01:11.730
+!MESSAGE Importing Eclipse project(s)
+
+!ENTRY org.eclipse.core.resources 4 77 2019-11-20 19:01:12.029
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2019-11-20 19:01:12.029
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2019-11-20 19:01:12.029
+!MESSAGE /home/runner/rpg_Textual.ls-java-project overlaps the location of another project: 'rpg_Textual.ls-java-project'
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2019-11-20 19:01:12.280
+!MESSAGE Initialization failed 
+!STACK 0
+java.lang.RuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.jdt.ls.core.internal.managers.EclipseProjectImporter.importDir(EclipseProjectImporter.java:96)
+	at org.eclipse.jdt.ls.core.internal.managers.EclipseProjectImporter.lambda$0(EclipseProjectImporter.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1085)
+	at org.eclipse.jdt.ls.core.internal.managers.EclipseProjectImporter.importToWorkspace(EclipseProjectImporter.java:63)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:132)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.access$1(ProjectsManager.java:126)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager$2.run(ProjectsManager.java:120)
+	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:38)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:733)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2289)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2316)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5733)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5690)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:113)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:217)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:170)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:54)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:264)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:248)
+	at org.eclipse.jdt.ls.core.internal.managers.EclipseProjectImporter.importDir(EclipseProjectImporter.java:92)
+	... 17 more
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:01:12.808
+!MESSAGE >> java/buildWorkspace (full)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:01:14.081
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:01:33.787
+!MESSAGE Classpath is incomplete. Only syntax errors will be reported for file:///home/runner/Main.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:01:44.496
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:01:44.622
+!MESSAGE >> document/hover
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:01:44.632
+!MESSAGE >> document/documentHighlight
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:01:45.133
+!MESSAGE >> document/codeAction

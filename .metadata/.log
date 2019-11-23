@@ -86,3 +86,6 @@ Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid projec
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-20 19:01:45.133
 !MESSAGE >> document/codeAction
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2019-11-23 03:02:30.022
+!MESSAGE >> document/hover

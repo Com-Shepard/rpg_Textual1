@@ -3,10 +3,12 @@ import java.util.Random;
 
 class Main {
   static Scanner entrada = new Scanner(System.in);
-  //Função que imprime Game Over na tela
-  static void soutGO(){
+
+  // Função que imprime Game Over na tela
+  static void soutGO() {
     System.out.println("Game Over");
   }
+
   // funcao que contem apenas contas simples
   static int equacaoSimples(int sorteado) {
 
@@ -105,7 +107,7 @@ class Main {
         System.out.printf("a) 4\nb) 3\nc) 3,5\n");
         System.out.println("Qual a resposta correta?");
         String resposta = entrada.next();
-        String correto = "b";    
+        String correto = "b";
         contador++;
         meuTeste = respondendoF(resposta, correto, contador);
         if (meuTeste == 8) {
@@ -457,7 +459,7 @@ class Main {
     if (resposta.equalsIgnoreCase(correto)) {
       sorteado = 8;
       System.out.println("RESPOSTA CORRETA");
-       System.out.println("");
+      System.out.println("");
     } else if (contador == 2) {
       System.out.println("");
       System.out.println("RESPOSTA INCORRETA!");
@@ -478,7 +480,7 @@ class Main {
       sorteado = 9;
     } else {
       System.out.println("RESPOSTA INCORRETA");
-       System.out.println("");
+      System.out.println("");
       contador++;
     }
     return sorteado;
@@ -491,7 +493,7 @@ class Main {
     if (resposta.equals(correto) || resposta.equals(correto1)) {
       sorteado = 8;
       System.out.println("RESPOSTA CORRETA");
-       System.out.println("");
+      System.out.println("");
     } else if (contador == 2) {
       System.out.println("");
       System.out.println("RESPOSTA INCORRETA!");
@@ -507,18 +509,520 @@ class Main {
 
     } else {
       System.out.println("RESPOSTA INCORRETA");
-       System.out.println("");
+      System.out.println("");
       contador++;
     }
     return sorteado;
   }
 
+  static int ato1H(String nome, String escolha, int sorteado) {
+    int x = 0;
+    boolean game = false;
+    while (game == false) {
+      System.out.println("");
+      System.out.println("Muito bem: " + nome + " seja muito bem vindo a Distopia Matemática.");
+      System.out.print("");
+      System.out.println("");
+      System.out.println("");
+      System.out.printf(
+          "O ano é 2039, o mundo como você conhece não é o mesmo, há cerca de 8 anos uma guerra entre os EUA e a Rússia devastou o planeta, uma arma \n"
+              + "de poder inimaginável foi utilizada pelo exército russo, ela atrapalhava o sitema cerebral dos atingidos, era como um PEM(pulso eletromagnético), na teoria desativava\n"
+              + "cada parte da função cognitiva do soldado afetado por alguns minutos, na prática fez com que o cérebro de cada pessoa atingida virasse uma calculadora\n"
+              + "ambulante, isso melhorava muito a capacidade de raciocinio lógico, e por conta disso, os atingidos passaram a ser chamados de Math's, porém, após\n"
+              + "certo tempo efeitos colaterais começaram a aparecer, em momentos esporádicos, ao realizar uma ação, ora mundana, ora complexa, uma conta surgia em \n"
+              + "suas mentes, para que essa ação acontecesse, o resultado precisava ser preciso. Vamos supor que um Math vai abrir uma porta, como num passe de mágica o \n"
+              + "tempo parece parar a sua volta, e uma conta vem a mente, ele coloca a calculadora em sua mente para funcionar, resolve a conta e apresenta uma resposta,\n"
+              + "se acertar, ele abre a porta sem problema algum, se errar, um movimento involuntário toma conta do seu corpo, e seu corpo não responde a essa ação, \n"
+              + "e a conta reaparece em sua mente, erros excesivos causam problemas cerebrais que vão desde uma dor de cabeça simples, até um acidente vascular cerebral\n"
+              + "que mais tarde leva a morte.\n"
+              + "Após a guerra a arma foi deixada de lado pelas forças russas e caiu nas mãos de terroristas,  ela foi utilizada em diversos países e causou danos irreparaveis à milhares de pessoas.\n.\n.\n.\n"
+              + "%s ao viajar para Londres, a negócios 2 anos atrás. Você caminhava próximo ao Big Bang, admirando aquela grandiosa construção. quando um zunido muito forte passou como um raio pelos seus ouvidos. Uma dor que você nunca sentiu antes tomou conta do seu cérebro, era como se mil abelhas ferroassem seu córtex cerebral. Você não enxergava muita coisa, a não ser os vultos das pessoas que ali estavam, fazendo o mesmo movimento que você, se contorcendo no chão até apagarem. Pouco tempo depois você acorda desnorteado. Você abre seus olhos mas não enxerga muita coisa, alguns números passam pela sua mente. E embora confuso você se levanta, olha em volta e a cada passo que dá um número surge em sua mente. Contas surgem e você logo entende que sua vida nunca mais será a mesma...agora você é um Math...\n\n",
+          nome);
+
+      System.out.printf(nome + ", você está viajando com sua esposa, Sara, em seu avião em direção \n"
+          + "as ilhas exponenciais, conhecidas por seus acidentes aéreos. Você e sua esposa estão \n"
+          + " indo para lá com um objetivo simples: fotografar a região, por pura e simples curiosidade.");
+      System.out.println("");
+      System.out.println("");
+      System.out.printf("Ás 17 horas, desta sexta-feira. Vocês saem do território nacional e chegam ao \n"
+          + "oceano atlântico. Algumas alterações na rota de vôo serão necessárias, a ilha esta ao noroeste \n"
+          + "e uma grande tempestade se aproxima. ");
+      System.out.println("");
+      System.out.println("");
+      System.out.println("***Esta parte do jogo funcionará como um tutorial***");
+      System.out.println(
+          "***Você deve sempre digitar a letra da opção que desejar. Seja em uma das escolhas do jogo, seja em uma das contas que lhe serão apresentadas.***");
+      System.out.println(
+          "***Você terá 3 chances para acertar a resposta das questões. Recomenda-se utilizar uma calculadora ou rascunho como auxílio***");
+      System.out.println(
+          "***Caso desperdice as 3 chances, você sofrerá consequências, as vezes no contexto da história, outras vezes, causando Game Over, e voltando ao menu***");
+      System.out.println("");
+      System.out.println("O que você fará? ");
+      System.out.println("a - Diminuir  a altitude de vôo. \n" + "b - Subir  a altitude  de vôo. \n"
+          + "c - Apenas manter a altitude.");
+      escolha = entrada.next();
+
+      // qualquer letra chamara a funcao que contem contas simples
+      switch (escolha) {
+      case "a":
+      case "A":
+      case "b":
+      case "B":
+      case "c":
+      case "C":
+        x = equacaoSimples(sorteado);
+      }
+      if (x == 8) {
+        game = true;
+        soutGO();
+        break;
+      }
+      System.out.println("");
+      System.out.println("");
+      System.out.println("Vocês entram em uma nuvem, grande, escura e quase maciça; \n"
+          + "mas isto não te assusta nem um pouco, você é um renomado Piloto \n"
+          + "e sabe o que deve ser feito nesta circunstancia.");
+      System.out.println("");
+      System.out.println("");
+      // boolean para manter a pergunta no laço até que seja feita a escolha correta
+      boolean repeticao = false;
+      while (repeticao != true) {
+        System.out.println("Vamos lá " + nome + " tome a decisão correta: ");
+        System.out.println("");
+        System.out.println("a - Acompanhar os instrumentos e manter o controle da aeronave.");
+        System.out.println("b - Tentar contato com a torre, para que a mesma possa te ajudar a sair dessa.");
+        escolha = entrada.next();
+        System.out.println("");
+        if ("a".equalsIgnoreCase(escolha)) {
+          x = equacaoSimples(sorteado);
+          if (x == 8) {
+            game = true;
+            soutGO();
+            break;
+          } else
+            System.out.println("Tudo certo, sua experiência faz com que você voe como se o clima não te impedisse.");
+          System.out.println("");
+          repeticao = true;
+
+        } else if ("b".equalsIgnoreCase(escolha)) {
+          System.out
+              .println("Você não consegue contato com a torre de controle, seu rádio parece ter parado de funcionar.");
+          System.out.println("");
+        }
+      }
+      System.out.printf("Mas como em um piscar de olhos, os seus instrumentos ficam descontrolados. \n"
+          + "(Sara): - O que houve %s? \n" + "(%s): - Não sei o que houve, isto nunca aconteceu!\n"
+          + "(Sara): - Talvez seja a ilha, os boatos diziam isso. \n"
+          + "(%s):- Amor você sabe que estes boatos não são verdadeiros, \n"
+          + "isso é apenas um fenômeno natural... Eu acho. \n"
+          + "O avião começa a perder estabilidade, uma turbulência muito forte começa a afetar a estabilidade do \n"
+          + " avião. Sara começa a gritar assustada. Você tenta manter a calma e consegue continuar controlando \n"
+          + "o avião, evitando qualquer problema maior; poucos segundos após isto um enorme raio branco acerta a sua \n"
+          + "aeronave; vocês se assustam e gritam muito, ficam temporariamente cegos, durante isto você para de sentir o \n"
+          + "motor do avião. \n Você agarra o manche na esperança de recuperar o controle: \n \n", nome, nome, nome);
+      x = equacaoMedia(sorteado);
+      if (x == 8) {
+        System.out.printf(
+            "Você sente algo diferente e logo repara que o avião esta perdendo sustentação e pode não haver mais o que fazer. \n "
+                + "O avião começa a cair como uma pedra.");
+        System.out.println("Você tenta novamente:");
+        System.out.println("");
+        x = equacaoMedia(sorteado);
+        if (x == 8) {
+          System.out.printf(
+              " Nada parece estar dando certo hoje, você falha e o avião continua caindo como uma pedra em direção do oceano. \n"
+                  + "Sem conseguir manter o controle do avião você e sua esposa estão complemente assustados; a grande nuvem começa \n"
+                  + "a desaparecer e na sua frente e você vê a ilha ja encontrando o bico do seu avião..... \n \n \n");
+          soutGO();
+          game = true;
+          break;
+        } else {
+          System.out.printf(
+              "Você puxa o manche com toda a sua força e consegue estabilidade novamente, más ainda sem os motores. \n");
+        }
+      } else {
+        System.out.printf("Você é realmente um exímio piloto e mantém o avião estável planando sem os motores. \n\n");
+      }
+      System.out.printf(" Agora sua missão é conseguir pousar com segurança na ilha.\n\n");
+      x = equacaoMedia(sorteado);
+      if (x == 8) {
+        System.out.println(
+            "Você ainda esta um pouco abalado pelo que aconteceu e algo esta atrapalhando suas habilidades como piloto, o avião começa a perder sustentação... você agora esta indo em direção a água");
+        System.out.println(
+            "Percebendo que não há mais tempo para um pouso calmo na praia, você tenta pousar de maneira suave sobre a água");
+        System.out.printf("\n\n");
+        x = equacaoMedia(sorteado);
+        if (x == 8) {
+          System.out.printf(
+              "Mesmo tendo uma larga experiência em pousos você não consegue mais controlar esta aeronave e acaba acertando em cheio a água e não sobrevive ao impacto....");
+          soutGO();
+          game = true;
+          break;
+        } else {
+          System.out.printf(
+              "Você consegue com sua ampla experiencia como piloto pousar a aeronave sobre a água de maneira bem turbulenta, porém, segura. \nIsto por sua vez acaba chamando atenção desnecessária. \n Vocês estão próximos a costa, a noite ja esta caindo e se nota muito movimento na água em torno do avião. \n"
+                  + "Ao olhar pela janela se veem muitos peixes estranhos e criaturas aparentemente hostis:");
+          System.out.printf("(Sara): - O que devemos fazer %s ? \n"
+              + "(%s):- Vamos esperar, a maré vai nos levar ate a praia em algum tempo. \n"
+              + "(Sara):- Mas isto não é seguro! Vamos tentar nadar até lá.\n"
+              + "(%s):- De forma alguma, o avião vai ser a nossa proteção na ilha.\n\n"
+              + "A noite passa e vocês conseguem restabelecer a calma dentro do possível pois o avião estava “atracado”.\n",
+              nome, nome, nome);
+        }
+      } else {
+        System.out.printf(
+            "Com sua grande experiência em pousos você reconhece o melhor local para o pouso na praia e com o \n"
+                + "angulo correto você faz a aproximação e a colisão é leve e controlada. \n\n"
+                + "(Sara):- %s, finalmente em terra firme, cheguei a achar que as coisas ficariam feias. \n"
+                + "(%s):- Por um breve segundo eu também pensei, mas você sabe quem é que manda nesse bebê - Você aponta para o avião.  \n"
+                + "(Sara):- As vezes acho que você gosta mais desse avião do que de mim... - Ela fala com tom de sarcasmo.\n"
+                + "(%s):- ATENÇÃO TODOS OS NATIVOS, A RAINHA DO DRAMA ESTA AQUI. - Você grita aliviado por saber que estão em um paraíso tropical..\n"
+                + "Você monta a poucos metros de distância do avião, a barraca que trouxeram. Acende uma fogueira, pega algum alimento e um vinho que estava nas bagagens, estende uma toalha de piquenique sobre o chão e convida- a a se sentar ao seu lado.\n Vocês ficam ali algumas horas, conversando sobre a vida, comendo, bebendo, rindo, depois entram na barraca, se aninham e dormem aguardando o que vos aguarda no grande dia de amanhã.",
+            nome, nome, nome);
+      }
+      game = true;
+    }
+    return x;
+  }
+
+  static int ato2H(String nome, String escolha, int sorteado) {
+    int x = 0;
+    boolean game = false;
+    while (game == false) {
+      System.out.printf("Finalmente em solo firme e depois de passarem por um gigantesco problema, vocês começam admirar a paisagem.\n\n"
+              + "A ilha é imensamente cheia de arvores, grandes, lindas e com um tom de verde muito agradável, frutas estão por\n"
+              + " toda a parte, pássaros belos e nunca antes visto por vocês.\n\n"
+              + "(%s): - Bom, pelo visto Sara, nós não teremos problemas com a fome.\n"
+              + "(Sara): - Nem com água, olhe ali, parece que é um lago.\n\n" + "a - Ir ver se a água é doce\n"
+              + "b - Ficar pela praia\n\n",
+          nome);
+      escolha = entrada.next();
+      switch (escolha) {
+      case "a":
+      case "A":
+        System.out.printf(
+            "Vocês entram na mata, e reparam na beleza do ambiente. Depois de alguns minutos vocês chegam em um rio; \n"
+                + "você pega um pouco da água com a mão e bebe.\n\n"
+                + "(%s): - Olha que incrível! Sara isso é potável com certeza.\n"
+                + "(Sara): - Nossa eu não posso acreditar.\n"
+                + "(%s): - Exatamente, tem algo de muito estranho aqui - uma nuvem aparece do nada o motor do avião apaga - precisamos verificar isso para sair daqui.\n"
+                + "(Sara): - Vamos sair daqui sim amor, mas antes vamos andar pela ilha e ver o que ela nos reserva...\n\n",
+            nome, nome);
+        break;
+      case "b":
+      case "B":
+        System.out.printf("(Sara): - Eu acho bom nós andarmos pela ilha para ver o que nos espera.\n"
+            + "(%s): - Ok, vamos pela praia.\n"
+            + "Andando pela praia vocês encontram na areia algumas marcas estranhas pintadas nas pedras. Sara fala sobre a possibilidade de existirem nativos na região.\n"
+            + "E por um breve momento você tem a sensação de estar sendo observado.\n\n", nome);
+        break;
+      }
+      System.out.printf(
+          "Após uma longa caminhada vocês chegam em uma clareira e o que vocês presenciam é incrível e quase inacreditável. \n"
+              + "Aviões antigos e aviões modernos uma diversidade de anos e modelos; aquilo se aproximaria de um museu.\n\n"
+              + "(%s): - Meu Deus meu bem, isso é inacreditável!\n" + "(Sara): - Eu estou sem palavras.\n"
+              + "(%s): - Vamos ver se existe alguma coisa que podemos aproveitar aqui.\n\n"
+              + "Vocês chegam a porta de um avião e você tenta girar a trava.\n\n",
+          nome, nome);
+      x = equacaoMedia(sorteado);
+      if (x == 8) {
+        System.out.printf("(%s): isso esta muito difícil, não vou conseguir.\n\n" + "a - Pedir ajuda a Sara.\n"
+            + "b - Tentar sozinho novamente.\n", nome);
+        escolha = entrada.next();
+        boolean teste = false;
+        int contGO = 0;
+        while (teste == false) {
+          contGO++;
+          if (escolha.equalsIgnoreCase("a")) {
+            
+            x = equacaoSimples(sorteado);
+            if (x == 8 && contGO == 2) {
+              System.out.printf("\n(Sara): - Deixe isso pra la, não vale a pena.\n"
+                  + "(%s): - Nós realmente precisamos pegar este, este avião parece mais inteiro do que os outros.\n\n Você sente sua cabeça doer, mas tenta mais uma vez.\n\n",
+                  nome);
+            } else if (x == 8 && contGO == 1) {
+              System.out.printf("\n(Sara): - Deixe isso, vamos voltar.\n"
+                  + "(%s): - De jeito nenhum, nosso rádio parou de funcionar e precisamos pegar o que esta ai dentro.\n",
+                  nome);
+            } else if (x == 8 && contGO == 3) {
+              System.out.printf("\n(Sara): - Amor, você esta bem????.\n"
+                  + "(%s): - Acho que.....exagerei......\n\n Você forçou demais sua mente, algo esta errado, sua cabeça esta latejando de dor e você não sente mais seus membros.",
+                  nome);
+              teste = true;
+              game = true;
+              break;
+            }else{
+              break;
+            }
+         
+          } else if (escolha.equalsIgnoreCase("b")) {
+           
+            x = equacaoMedia(sorteado);
+            if (x == 8 && contGO == 2) {
+              System.out.printf("\n(Sara): - Deixe isso pra la, não vale a pena.\n"
+                  + "(%s): - Nós realmente precisamos pegar este, este avião parece mais inteiro do que os outros.\n\n Você sente sua cabeça doer, mas tenta mais uma vez.\n\n",
+                  nome);
+            } else if (x == 8 && contGO == 1) {
+              System.out.printf("\n(Sara): - Deixe isso, vamos voltar.\n"
+                  + "(%s): - De jeito nenhum, nosso rádio parou de funcionar e precisamos pegar o que esta ai dentro.\n",
+                  nome);
+            } else if (x == 8 && contGO == 3) {
+              System.out.printf("\n(Sara): - Amor, você esta bem????.\n"
+                  + "(%s): - Acho que.....exagerei......\n\n Você forçou demais sua mente, algo esta errado, sua cabeça esta latejando de dor e você não sente mais seus membros.",
+                  nome);
+              teste = true;
+              game = true;
+              break;
+            }
+            else{
+              break;
+            }
+          }
+        }
+
+      }
+      System.out.printf("A porta se abre com uma dificuldade absurda mas tudo da certo; vocês estão dentro do avião agora, \n"
+                + "um cheiro forte de podridão está no ambiente. Existem corpos dentro do avião, parecem estar ali a muito tempo, um deles com o rádio da aeronave nas mãos, \nparece ter tentado entrar em contato com alguém antes de morrer. Você retira o rádio e"
+                + "vocês decidem sair, e voltar para suau aeronave com o este rádio em mãos.\n\nVoltando para a praia com o rádio em mãos vocês, tentam conectar ele no lugar do seu rádio\n\n");
+                x = equacaoMedia(sorteado){
+                  
+                }
+
+    }
+    return x;
+  }
+
+  static void ato3H(String nome, String escolha, int sorteado) {
+    System.out.printf("Depois deste momento horrivel você acorda ainda na praia, o avião continua ali, intacto, você levanta olha em \n"  
+                + "volta meio assustado e um pouco tonto por causa do impacto, depois de olhar em volta você confere o combustivel \n"
+                + "do avião e repara que tem o suficiente para a volta para casa, determidado como um herói você pega o rádio e \n"
+                + "grita em alto em bom som: ");
+                System.out.printf("((%s)): EU (%s), QUERO MINHA ESPOSA DE VOLTA!\n", nome);
+                System.out.printf("Pelo rádio você escuta gritos e grunidos graves, os gritos são de sua esposa e os grunidos que não podem ser \n"
+                + "compreendidos são daqueles homens e mulheres que a capturaram.\n"
+                + "Obstinado, você corre para dentro da mata gritando pelo nome de sua esposa.\n"
+                + "((%s)): SARA ONDE VOCÊ ESTÁ!?\n", nome);
+                System.out.printf("E quanto mais corre para dentro da mata, os barulhos aumentam e você a encontra presa em uma árvore cercada pelos nativos.\n"
+                + "Neste momento Sara tenta se soltar enquanto os nativos vão em sua direção de maneira calma\n");
+                x = equacaoMedia(sorteado);
+                if (x==8){
+                  System.out.printf("você os atrae para longe dela, correndo para a direção da praia\n"
+                + "((%s)): SARA SE SOLTA E VENHA PARA O AVIÃO!\n"
+                + "Com uma pedra que estava ao seu lado Sara consegue cortar as cordas e faz o que lhe foi dito.\n");
+                }
+                else {
+                  System.out.printf("Sara se solta e pede para que você vá para o avião.\n"
+                + "(Sara): Corra para o avião eu te encontro lá! \n"
+                + "Com uma pedra que estava ao seu lado, Sara consegue cortar as cordas e faz o que lhe foi dito.\n");
+                }
+
+
+
+
+  }
+
+  static int ato1M(String nome, String escolha, int sorteado) {
+    int x = 0;
+    boolean game = false;
+
+    while (game == false) {
+      System.out.println("");
+      System.out.println("Muito bem: " + nome + " seja muito bem vinda a Distopia Matemática.");
+      System.out.print("");
+      System.out.println("");
+      System.out.println("");
+      System.out.printf(
+          "O ano é 2039, o mundo como você conhece não é o mesmo, há cerca de 8 anos uma guerra entre os EUA e a Rússia devastou o planeta, uma arma \n"
+              + "de poder inimaginável foi utilizada pelo exército russo, ela atrapalhava o sitema cerebral dos atingidos, era como um PEM(pulso eletromagnético), na teoria desativava\n"
+              + "cada parte da função cognitiva do soldado afetado por alguns minutos, na prática fez com que o cérebro de cada pessoa atingida virasse uma calculadora\n"
+              + "ambulante, isso melhorava muito a capacidade de raciocinio lógico, e por conta disso, os atingidos passaram a ser chamados de Math's, porém, após\n"
+              + "certo tempo efeitos colaterais começaram a aparecer, em momentos esporádicos, ao realizar uma ação, ora mundana, ora complexa, uma conta surgia em \n"
+              + "suas mentes, para que essa ação acontecesse, o resultado precisava ser preciso. Vamos supor que um Math vai abrir uma porta, como num passe de mágica o \n"
+              + "tempo parece parar a sua volta, e uma conta vem a mente, ele coloca a calculadora em sua mente para funcionar, resolve a conta e apresenta uma resposta,\n"
+              + "se acertar, ele abre a porta sem problema algum, se errar, um movimento involuntário toma conta do seu corpo, e seu corpo não responde a essa ação, \n"
+              + "e a conta reaparece em sua mente, erros excesivos causam problemas cerebrais que vão desde uma dor de cabeça simples, até um acidente vascular cerebral\n"
+              + "que mais tarde leva a morte.\n"
+              + "Após a guerra a arma foi deixada de lado pelas forças russas e caiu nas mãos de terroristas,  ela foi utilizada em diversos países e causou danos irreparaveis à milhares de pessoas.\n.\n.\n.\n"
+              + "%s ao viajar para Paris a negócios 2 anos atrás, você caminhava próximo a Torre Eiffel, admirando aquela grandiosa construção, quando um zunido muito forte passou como um raio pelos seus ouvidos, e uma dor que você nunca sentiu antes tomou conta do seu cérebro, era como se mil abelhas ferroassem seu córtex cerebral, você não enxergava muita coisa a não ser os vultos das pessoas que ali estavam, fazendo o mesmo movimento que você, se contorcendo no chão até apagarem. Pouco tempo depois você acorda desnorteada, você abre seus olhos mas não enxerga muita coisa, alguns números passam pela sua mente, e embora confuso você se levanta, olha em volta e a cada passo que dá um número surge em sua mente. Contas surgem e você logo entende que sua vida nunca mais será a mesma...agora você é uma Math...\n\n",
+          nome);
+
+      System.out.printf(nome + ", você está viajando com seu marido, Alexandre, em seu avião em direção \n"
+          + "as ilhas exponenciais, conhecidas por seus acidentes aéreos, você e seu marido estão \n"
+          + " indo para lá com alguns objetivos simples, fotografar a região, por pura e simples curiosidade.");
+      System.out.println("");
+      System.out.println("");
+      System.out.printf("Ás 17 horas desta sexta-feira vocês saem do território nacional e chegam ao \n"
+          + "oceano atlântico, algumas alterações na rota de vôo serão necessárias, a ilha esta ao noroeste \n"
+          + "e uma grande tempestade se aproxima. ");
+      System.out.println("");
+      System.out.println("");
+      System.out.println("***Esta parte do jogo funcionará como um tutorial***");
+      System.out.println(
+          "***Você deve sempre digitar a letra da opção que desejar, seja em uma das escolhas do jogo, seja em uma das contas que lhe serão apresentadas.***");
+      System.out.println(
+          "***Você terá 3 chances para acertar a resposta das questões, recomenda-se utilizar uma calculadora ou rascunho como auxílio***");
+      System.out.println(
+          "***Caso desperdice as 3 chances, você sofrerá consequências, as vezes no contexto da história, outras vezes, causando Game Over, e voltando ao menu***");
+      System.out.println("");
+      System.out.println("O que você fará? ");
+      System.out.println("a - Diminuir  a altitude de vôo. \n" + "b - Subir  a altitude  de vôo. \n"
+          + "c - Apenas manter a altitude.");
+      escolha = entrada.next();
+
+      // qualquer letra chamara a funcao que contem contas simples
+      switch (escolha) {
+      case "a":
+      case "A":
+      case "b":
+      case "B":
+      case "c":
+      case "C":
+        x = equacaoSimples(sorteado);
+      }
+      if (x == 8) {
+        game = true;
+        soutGO();
+        break;
+      }
+      System.out.println("");
+      System.out.println("");
+      System.out.println("Vocês entram na nuvem, grande, escura e quase maciça; \n"
+          + "mas isto não te assusta nem um pouco, você é uma  Piloto renomada \n"
+          + "e sabe o que deve ser feito nesta circunstancia.");
+      System.out.println("");
+      System.out.println("");
+      boolean repeticao = false;
+      while (repeticao != true) {
+        System.out.println("Vamos lá " + nome + " tome a decisão correta: ");
+        System.out.println("");
+        System.out.println("a - Acompanhar os instrumentos e manter o controle da aeronave.");
+        System.out.println("b - Tentar contato com a torre, para que a mesma possa te ajudar a sair dessa.");
+        escolha = entrada.next();
+        System.out.println("");
+        if ("a".equalsIgnoreCase(escolha)) {
+          x = equacaoSimples(sorteado);
+          if (x == 8) {
+            game = true;
+            soutGO();
+            break;
+          } else
+            System.out.println("Tudo certo, sua experiência faz com que você voe como se o clima não te impedisse.");
+          System.out.println("");
+          repeticao = true;
+
+        } else if ("b".equalsIgnoreCase(escolha)) {
+          System.out
+              .println("Você não consegue contato com a torre de controle, seu rádio parece ter parado de funcionar.");
+          System.out.println("");
+        }
+      }
+      System.out.printf("Mas como em um piscar de olhos, os seus instrumentos ficam descontrolados. \n"
+          + "(Ale): - O que houve %s? \n" + "(%s): - Não sei o que houve, isto nunca aconteceu!\n"
+          + "(Ale): - Talvez seja a ilha, os boatos diziam isso. \n"
+          + "(%s):- Amor você sabe que estes boatos não são verdadeiros, \n"
+          + "isso é apenas um fenômeno natural... eu acho. \n"
+          + "O avião começa a perder estabilidade, uma turbulência muito forte começa a afetar a estabilidade do \n"
+          + " avião, Alexandre começa a gritar assustado, você tenta manter a calma e consegue continuar controlando \n"
+          + "o avião e evitando qualquer problema maior; poucos segundos após isto um enorme raio branco acerta o seu \n"
+          + "avião; vocês se assustam e gritam muito, ficam temporariamente cegos, durante isto você para de sentir o \n"
+          + "motor do avião. \n Você agarra o manche na esperança de recuperar o controle: \n \n", nome, nome, nome);
+      x = equacaoMedia(sorteado);
+      if (x == 8) {
+        System.out.printf(
+            "Você sente algo diferente e logo repara que o avião esta perdendo sustentação e pode não haver mais o que fazer. \n "
+                + "O avião começa a cair como uma pedra.");
+        System.out.println("Você tenta novamente:");
+        System.out.println("");
+        x = equacaoMedia(sorteado);
+        if (x == 8) {
+          System.out.printf(
+              " Nada parece estar dando certo hoje, você falha e o avião continua caindo como uma pedra em direção do oceano. \n"
+                  + "Sem conseguir manter o controle do avião você e seu marido estão complemente assustados; a grande nuvem começa \n"
+                  + "a desaparecer e na sua frente você vê a ilha ja encontrando o bico do seu avião..... \n \n \n");
+          soutGO();
+          game = true;
+          break;
+        } else {
+          System.out.printf(
+              "Você puxa o manche com toda a sua força e consegue estabilidade novamente, mas ainda sem os motores. \n");
+        }
+      } else {
+        System.out.printf("Você é realmente uma exímio piloto e mantém o avião estável planando sem os motores. \n\n");
+      }
+      System.out.printf(" Agora sua missão é conseguir pousar com segurança na ilha.\n\n");
+      x = equacaoMedia(sorteado);
+      if (x == 8) {
+        System.out.println(
+            "Você ainda esta um pouco abalada pelo que aconteceu e algo esta atrapalhando suas habilidades como piloto, o avião começa a perder sustentação... você agora esta indo em direção a água");
+        System.out.println(
+            "Percebendo que não há mais tempo para um pouso calmo na praia, você tenta pousar de maneira suave sobre a água");
+        System.out.printf("\n\n");
+        x = equacaoMedia(sorteado);
+        if (x == 8) {
+          System.out.printf(
+              "Mesmo tendo uma larga experiência em pousos você não consegue mais controlar esta aeronave e acaba acertando em cheio o oceano e não sobrevive ao impacto....");
+          soutGO();
+          game = true;
+          break;
+        } else {
+          System.out.printf(
+              "Você consegue com sua ampla experiencia como piloto pousar a aeronave sobre a água de maneira bem turbulenta, porém, segura. \nIsto por sua vez acaba chamando atenção desnecessária. \n Vocês estão próximos a costa, a noite ja esta caindo e nota-se muito movimento na água em torno do avião. \n"
+                  + "Ao olhar pela janela se veem muitos peixes estranhos e criaturas aparentemente hostis:");
+          System.out.printf("(Ale): - O que devemos fazer %s ? \n"
+              + "(%s):- Vamos esperar, a maré vai nos levar ate a praia em algum tempo. \n"
+              + "(Ale):- Mas isto não é seguro! Vamos tentar nadar até lá.\n"
+              + "(%s):- De forma alguma, o avião vai ser a nossa proteção na ilha.\n\n"
+              + "A noite passa e vocês conseguem restabelecer a calma dentro do possível pois o avião estava “atracado”.\n",
+              nome, nome, nome);
+        }
+      } else {
+        System.out.printf(
+            "Com sua grande experiência em pousos você reconhece o melhor local para o pouso na praia e com o \n"
+                + "angulo correto faz a aproximação tendo uma colisão leve e controlada. \n\n"
+                + "(Ale):- %s, finalmente em terra firme, cheguei a achar que as coisas ficariam feias \n"
+                + "(%s):- Por um breve segundo eu também pensei, mas você sabe quem é que manda nesse bebê - você aponta para o avião  \n"
+                + "(Ale):- As vezes acho que você gosta mais desse avião do que de mim... - ele fala com tom de sarcasmo\n"
+                + "(%s):- ATENÇÃO TODOS OS NATIVOS, A RAINHA DO DRAMA ESTA AQUI. - você grita aliviada por saber que estão em um paraíso tropical..seguros afinal\n\n"
+                + "Você monta a poucos metros de distância do avião a barraca que trouxeram para vocês, acende uma fogueira, pega algum alimento e um vinho que estava nas bagagens, estende uma toalha de piquenique sobre o chão e convida-o a se sentar ao seu lado.\n Vocês ficam ali algumas horas, conversando sobre a vida, comendo, bebendo, rindo, depois entram na barraca, se aninham e dormem aguardando o que vos aguarda no dia de amanhã",
+            nome, nome, nome);
+      }
+
+    }
+    return x;
+  }
+
+  static int ato3M(String nome, String escolha, int sorteado){
+    System.out.printf("Depois deste momento horrivel você acorda ainda na praia, o avião continua ali, intacto, você levanta olha em \n"  
+                + "volta meio assustada e um pouco tonta por causa do impacto, depois de olhar em volta você confere o combustivel \n"
+                + "do avião e repara que tem o suficiente para a volta para casa, determidada como uma heróina, você pega o rádio e \n"
+                + "grita em alto em bom som: ");
+                System.out.printf("((%s)): EU (%s), QUERO MEU ESPOSO DE VOLTA!\n", nome);
+                System.out.printf("Pelo radio você escuta gritos e grunidos graves, os gritos são de seu marido e os grunidos que não podem ser \n"
+                + "compriendidos são daqueles homens e mulheres que o capturaram.\n"
+                + "Obstinada, você corre para dentro da mata gritando pelo nome de dele.\n"
+                + "((%s)): ALEXANDRE ONDE VOCÊ ESTÁ!?\n", nome);
+                System.out.printf("E quanto mais corre para dentro da mata, mais os barulhos aumentam e você o encontra preso em uma árvore cercado pelos nativos.\n"
+                + "Neste momento Alexandre tenta se soltar enquanto os nativos vão em sua direção de maneira calma\n");
+                x = equacaoMedia(sorteado);
+                if (x==8){
+                  System.out.printf("você os atrai para longe dele, correndo para a direção da praia.\n"
+                + "((%s)): ALEXANDRE, SE SOLTA E VENHA PARA O AVIÃO!\n"
+                + "Com uma pedra que estava ao lado de Alexandre, ele consegue cortar as cordas e faz o que lhe foi dito.\n");
+                }
+                else {
+                  System.out.printf("Alexandre se solta e pede para que você vá para o avião.\n"
+                + "(Alexandre): Corra para o avião eu te encontro lá! \n"
+                + "Com uma pedra que estava ao seu lado, Alexandre consegue cortar as cordas e faz o que lhe foi dito.\n");
+                }
+
+  }
+
   // funcao para todo o desenrolar da historia
   static void historia() {
-    String nome = "", sexo = "", simNao;
-    //inteiro a ser randomizado
+    String nome = "", sexo = "", simNao, escolha = "";
+    // inteiro a ser randomizado
     int sorteado = 0;
-    //recebe todos os testes sorteados
+    // recebe todos os testes sorteados
     int x = 0;
 
     // boolean para sempre que der "false" estrará dentro dos loops
@@ -543,318 +1047,45 @@ class Main {
         simNao = entrada.next();
         teste = confirmador(simNao);
       }
-      //História para os que escolheram ser do sexo masculino
+      // História para os que escolheram ser do sexo masculino
       if (sexo.equalsIgnoreCase("homem")) {
-        System.out.println("");
-        System.out.println("Muito bem: " + nome + " seja muito bem vindo a Distopia Matemática.");
-        System.out.print("");
-        System.out.println("");
-        System.out.println("");
-        System.out.printf(
-            "O ano é 2039, o mundo como você conhece não é o mesmo, há cerca de 8 anos uma guerra entre os EUA e a Rússia devastou o planeta, uma arma \n"
-                + "de poder inimaginável foi utilizada pelo exército russo, ela atrapalhava o sitema cerebral dos atingidos, era como um PEM(pulso eletromagnético), na teoria desativava\n"
-                + "cada parte da função cognitiva do soldado afetado por alguns minutos, na prática fez com que o cérebro de cada pessoa atingida virasse uma calculadora\n"
-                + "ambulante, isso melhorava muito a capacidade de raciocinio lógico, e por conta disso, os atingidos passaram a ser chamados de Math's, porém, após\n"
-                + "certo tempo efeitos colaterais começaram a aparecer, em momentos esporádicos, ao realizar uma ação, ora mundana, ora complexa, uma conta surgia em \n"
-                + "suas mentes, para que essa ação acontecesse, o resultado precisava ser preciso. Vamos supor que um Math vai abrir uma porta, como num passe de mágica o \n"
-                + "tempo parece parar a sua volta, e uma conta vem a mente, ele coloca a calculadora em sua mente para funcionar, resolve a conta e apresenta uma resposta,\n"
-                + "se acertar, ele abre a porta sem problema algum, se errar, um movimento involuntário toma conta do seu corpo, e seu corpo não responde a essa ação, \n"
-                + "e a conta reaparece em sua mente, erros excesivos causam problemas cerebrais que vão desde uma dor de cabeça simples, até um acidente vascular cerebral\n"
-                + "que mais tarde leva a morte.\n"
-                + "Após a guerra a arma foi deixada de lado pelas forças russas e caiu nas mãos de terroristas,  ela foi utilizada em diversos países e causou danos irreparaveis à milhares de pessoas.\n.\n.\n.\n"
-                + "%s ao viajar para Londres, a negócios 2 anos atrás. Você caminhava próximo ao Big Bang, admirando aquela grandiosa construção. quando um zunido muito forte passou como um raio pelos seus ouvidos. Uma dor que você nunca sentiu antes tomou conta do seu cérebro, era como se mil abelhas ferroassem seu córtex cerebral. Você não enxergava muita coisa, a não ser os vultos das pessoas que ali estavam, fazendo o mesmo movimento que você, se contorcendo no chão até apagarem. Pouco tempo depois você acorda desnorteado. Você abre seus olhos mas não enxerga muita coisa, alguns números passam pela sua mente. E embora confuso você se levanta, olha em volta e a cada passo que dá um número surge em sua mente. Contas surgem e você logo entende que sua vida nunca mais será a mesma...agora você é um Math...\n\n",
-            nome);
-
-        System.out.printf(nome + ", você está viajando com sua esposa, Sara, em seu avião em direção \n"
-            + "as ilhas exponenciais, conhecidas por seus acidentes aéreos. Você e sua esposa estão \n"
-            + " indo para lá com um objetivo simples: fotografar a região, por pura e simples curiosidade.");
-        System.out.println("");
-        System.out.println("");
-        System.out.printf("Ás 17 horas, desta sexta-feira. Vocês saem do território nacional e chegam ao \n"
-            + "oceano atlântico. Algumas alterações na rota de vôo serão necessárias, a ilha esta ao noroeste \n"
-            + "e uma grande tempestade se aproxima. ");
-        System.out.println("");
-        System.out.println("");
-         System.out.println("***Esta parte do jogo funcionará como um tutorial***");
-        System.out.println("***Você deve sempre digitar a letra da opção que desejar. Seja em uma das escolhas do jogo, seja em uma das contas que lhe serão apresentadas.***");
-        System.out.println("***Você terá 3 chances para acertar a resposta das questões. Recomenda-se utilizar uma calculadora ou rascunho como auxílio***");
-        System.out.println("***Caso desperdice as 3 chances, você sofrerá consequências, as vezes no contexto da história, outras vezes, causando Game Over, e voltando ao menu***");
-        System.out.println("");
-        System.out.println("O que você fará? ");
-        System.out.println("a - Diminuir  a altitude de vôo. \n" + "b - Subir  a altitude  de vôo. \n"
-            + "c - Apenas manter a altitude.");
-        String escolha = entrada.next();
-
-        // qualquer letra chamara a funcao que contem contas simples
-        switch (escolha) {
-        case "a":
-        case "A":
-        case "b":
-        case "B":
-        case "c":
-        case "C":
-          x = equacaoSimples(sorteado);
-        }
+        x = ato1H(nome, escolha, sorteado);
         if (x == 8) {
-          game = true;
           soutGO();
+          game = true;
           break;
         }
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Vocês entram em uma nuvem, grande, escura e quase maciça; \n"
-            + "mas isto não te assusta nem um pouco, você é um renomado Piloto \n"
-            + "e sabe o que deve ser feito nesta circunstancia.");
-        System.out.println("");
-        System.out.println("");
-        //boolean para manter a pergunta no laço até que seja feita a escolha correta
-        boolean repeticao = false;
-        while( repeticao != true){
-        System.out.println("Vamos lá " + nome + " tome a decisão correta: ");
-        System.out.println("");
-        System.out.println("a - Acompanhar os instrumentos e manter o controle da aeronave.");
-        System.out.println("b - Tentar contato com a torre, para que a mesma possa te ajudar a sair dessa.");
-        escolha = entrada.next();
-        System.out.println("");
-        if ("a".equalsIgnoreCase(escolha)) {
-         x = equacaoSimples(sorteado);
-          if (x == 8) {
-          game = true;
+        x = ato2H(nome, escolha, sorteado);
+        if (x == 8) {
           soutGO();
+          game = true;
           break;
-          }else
-          System.out.println("Tudo certo, sua experiência faz com que você voe como se o clima não te impedisse.");
-          System.out.println("");
-          repeticao = true;
-       
-        } else if ("b".equalsIgnoreCase(escolha)) {
-          System.out.println("Você não consegue contato com a torre de controle, seu rádio parece ter parado de funcionar.");
-          System.out.println("");
         }
-       }
-          System.out.printf("Mas como em um piscar de olhos, os seus instrumentos ficam descontrolados. \n"
-                + "(Sara): - O que houve %s? \n"
-                + "(%s): - Não sei o que houve, isto nunca aconteceu!\n"
-                + "(Sara): - Talvez seja a ilha, os boatos diziam isso. \n"
-                + "(%s):- Amor você sabe que estes boatos não são verdadeiros, \n"
-                + "isso é apenas um fenômeno natural... Eu acho. \n"
-                + "O avião começa a perder estabilidade, uma turbulência muito forte começa a afetar a estabilidade do \n"
-                + " avião. Sara começa a gritar assustada. Você tenta manter a calma e consegue continuar controlando \n"
-                + "o avião, evitando qualquer problema maior; poucos segundos após isto um enorme raio branco acerta a sua \n"
-                + "aeronave; vocês se assustam e gritam muito, ficam temporariamente cegos, durante isto você para de sentir o \n"
-                + "motor do avião. \n Você agarra o manche na esperança de recuperar o controle: \n \n", nome, nome, nome);
-                x = equacaoMedia(sorteado);
-                 if (x == 8) {
-                  System.out.printf("Você sente algo diferente e logo repara que o avião esta perdendo sustentação e pode não haver mais o que fazer. \n "
-                + "O avião começa a cair como uma pedra.");
-                System.out.println("Você tenta novamente:");
-                System.out.println("");
-                  x = equacaoMedia(sorteado);
-                   if (x == 8) {
-                    System.out.printf(" Nada parece estar dando certo hoje, você falha e o avião continua caindo como uma pedra em direção do oceano. \n"
-                + "Sem conseguir manter o controle do avião você e sua esposa estão complemente assustados; a grande nuvem começa \n"
-                + "a desaparecer e na sua frente e você vê a ilha ja encontrando o bico do seu avião..... \n \n \n");
-                    soutGO();
-                    game = true;                  
-                    break;
-                   }else{
-                     System.out.printf("Você puxa o manche com toda a sua força e consegue estabilidade novamente, más ainda sem os motores. \n");
-                   }
-                 }else{
-                   System.out.printf("Você é realmente um exímio piloto e mantém o avião estável planando sem os motores. \n\n");
-                 }
-                 System.out.printf(" Agora sua missão é conseguir pousar com segurança na ilha.\n\n");
-                 x = equacaoMedia(sorteado);
-                 if(x == 8){
-                   System.out.println("Você ainda esta um pouco abalado pelo que aconteceu e algo esta atrapalhando suas habilidades como piloto, o avião começa a perder sustentação... você agora esta indo em direção a água");
-                   System.out.println("Percebendo que não há mais tempo para um pouso calmo na praia, você tenta pousar de maneira suave sobre a água");
-                   System.out.printf("\n\n");
-                   x = equacaoMedia(sorteado);
-                   if(x == 8){
-                     System.out.printf( "Mesmo tendo uma larga experiência em pousos você não consegue mais controlar esta aeronave e acaba acertando em cheio a água e não sobrevive ao impacto....");
-                     soutGO();
-                     game = true;
-                     break;
-                   }else{
-                     System.out.printf("Você consegue com sua ampla experiencia como piloto pousar a aeronave sobre a água de maneira bem turbulenta, porém, segura. \nIsto por sua vez acaba chamando atenção desnecessária. \n Vocês estão próximos a costa, a noite ja esta caindo e se nota muito movimento na água em torno do avião. \n"
-                    + "Ao olhar pela janela se veem muitos peixes estranhos e criaturas aparentemente hostis:");
-                    System.out.printf("(Sara): - O que devemos fazer %s ? \n"
-                + "(%s):- Vamos esperar, a maré vai nos levar ate a praia em algum tempo. \n"
-                + "(Sara):- Mas isto não é seguro! Vamos tentar nadar até lá.\n"
-                + "(%s):- De forma alguma, o avião vai ser a nossa proteção na ilha.\n\n"
-                + "A noite passa e vocês conseguem restabelecer a calma dentro do possível pois o avião estava “atracado”.\n", nome, nome, nome);
-                   }
-                 }else{
-                   System.out.printf("Com sua grande experiência em pousos você reconhece o melhor local para o pouso na praia e com o \n"
-                + "angulo correto você faz a aproximação e a colisão é leve e controlada. \n\n"
-                +"(Sara):- %s, finalmente em terra firme, cheguei a achar que as coisas ficariam feias. \n"
-                + "(%s):- Por um breve segundo eu também pensei, mas você sabe quem é que manda nesse bebê - Você aponta para o avião.  \n"
-                + "(Sara):- As vezes acho que você gosta mais desse avião do que de mim... - Ela fala com tom de sarcasmo.\n"
-                + "(%s):- ATENÇÃO TODOS OS NATIVOS, A RAINHA DO DRAMA ESTA AQUI. - Você grita aliviado por saber que estão em um paraíso tropical..\n"
-                + "Você monta a poucos metros de distância do avião, a barraca que trouxeram. Acende uma fogueira, pega algum alimento e um vinho que estava nas bagagens, estende uma toalha de piquenique sobre o chão e convida- a a se sentar ao seu lado.\n Vocês ficam ali algumas horas, conversando sobre a vida, comendo, bebendo, rindo, depois entram na barraca, se aninham e dormem aguardando o que vos aguarda no grande dia de amanhã.", nome, nome, nome);
-                 }
 
       }
-      //História do jogo para os jogadores que escolheram ser do sexo feminino
+      // História do jogo para os jogadores que escolheram ser do sexo feminino
       else if (sexo.equalsIgnoreCase("Mulher")) {
-         System.out.println("");
-        System.out.println("Muito bem: " + nome + " seja muito bem vinda a Distopia Matemática.");
-        System.out.print("");
-        System.out.println("");
-        System.out.println("");
-        System.out.printf(
-            "O ano é 2039, o mundo como você conhece não é o mesmo, há cerca de 8 anos uma guerra entre os EUA e a Rússia devastou o planeta, uma arma \n"
-                + "de poder inimaginável foi utilizada pelo exército russo, ela atrapalhava o sitema cerebral dos atingidos, era como um PEM(pulso eletromagnético), na teoria desativava\n"
-                + "cada parte da função cognitiva do soldado afetado por alguns minutos, na prática fez com que o cérebro de cada pessoa atingida virasse uma calculadora\n"
-                + "ambulante, isso melhorava muito a capacidade de raciocinio lógico, e por conta disso, os atingidos passaram a ser chamados de Math's, porém, após\n"
-                + "certo tempo efeitos colaterais começaram a aparecer, em momentos esporádicos, ao realizar uma ação, ora mundana, ora complexa, uma conta surgia em \n"
-                + "suas mentes, para que essa ação acontecesse, o resultado precisava ser preciso. Vamos supor que um Math vai abrir uma porta, como num passe de mágica o \n"
-                + "tempo parece parar a sua volta, e uma conta vem a mente, ele coloca a calculadora em sua mente para funcionar, resolve a conta e apresenta uma resposta,\n"
-                + "se acertar, ele abre a porta sem problema algum, se errar, um movimento involuntário toma conta do seu corpo, e seu corpo não responde a essa ação, \n"
-                + "e a conta reaparece em sua mente, erros excesivos causam problemas cerebrais que vão desde uma dor de cabeça simples, até um acidente vascular cerebral\n"
-                + "que mais tarde leva a morte.\n"
-                + "Após a guerra a arma foi deixada de lado pelas forças russas e caiu nas mãos de terroristas,  ela foi utilizada em diversos países e causou danos irreparaveis à milhares de pessoas.\n.\n.\n.\n"
-                + "%s ao viajar para Paris a negócios 2 anos atrás, você caminhava próximo a Torre Eiffel, admirando aquela grandiosa construção, quando um zunido muito forte passou como um raio pelos seus ouvidos, e uma dor que você nunca sentiu antes tomou conta do seu cérebro, era como se mil abelhas ferroassem seu córtex cerebral, você não enxergava muita coisa a não ser os vultos das pessoas que ali estavam, fazendo o mesmo movimento que você, se contorcendo no chão até apagarem. Pouco tempo depois você acorda desnorteada, você abre seus olhos mas não enxerga muita coisa, alguns números passam pela sua mente, e embora confuso você se levanta, olha em volta e a cada passo que dá um número surge em sua mente. Contas surgem e você logo entende que sua vida nunca mais será a mesma...agora você é uma Math...\n\n",
-            nome);
-
-        System.out.printf(nome + ", você está viajando com seu marido, Alexandre, em seu avião em direção \n"
-            + "as ilhas exponenciais, conhecidas por seus acidentes aéreos, você e seu marido estão \n"
-            + " indo para lá com alguns objetivos simples, fotografar a região, por pura e simples curiosidade.");
-        System.out.println("");
-        System.out.println("");
-        System.out.printf("Ás 17 horas desta sexta-feira vocês saem do território nacional e chegam ao \n"
-            + "oceano atlântico, algumas alterações na rota de vôo serão necessárias, a ilha esta ao noroeste \n"
-            + "e uma grande tempestade se aproxima. ");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("***Esta parte do jogo funcionará como um tutorial***");
-        System.out.println("***Você deve sempre digitar a letra da opção que desejar, seja em uma das escolhas do jogo, seja em uma das contas que lhe serão apresentadas.***");
-        System.out.println("***Você terá 3 chances para acertar a resposta das questões, recomenda-se utilizar uma calculadora ou rascunho como auxílio***");
-        System.out.println("***Caso desperdice as 3 chances, você sofrerá consequências, as vezes no contexto da história, outras vezes, causando Game Over, e voltando ao menu***");
-        System.out.println("");
-        System.out.println("O que você fará? ");
-        System.out.println("a - Diminuir  a altitude de vôo. \n" + "b - Subir  a altitude  de vôo. \n"
-            + "c - Apenas manter a altitude.");
-        String escolha = entrada.next();
-
-        // qualquer letra chamara a funcao que contem contas simples
-        switch (escolha) {
-        case "a":
-        case "A":
-        case "b":
-        case "B":
-        case "c":
-        case "C":
-          x = equacaoSimples(sorteado);
-        }
+        x = ato1M(nome, escolha, sorteado);
         if (x == 8) {
-          game = true;
           soutGO();
+          game = true;
           break;
         }
-        System.out.println("");
-        System.out.println("");
-        System.out.println("Vocês entram na nuvem, grande, escura e quase maciça; \n"
-            + "mas isto não te assusta nem um pouco, você é uma  Piloto renomada \n"
-            + "e sabe o que deve ser feito nesta circunstancia.");
-        System.out.println("");
-        System.out.println("");
-        boolean repeticao = false;
-        while( repeticao != true){
-        System.out.println("Vamos lá " + nome + " tome a decisão correta: ");
-        System.out.println("");
-        System.out.println("a - Acompanhar os instrumentos e manter o controle da aeronave.");
-        System.out.println("b - Tentar contato com a torre, para que a mesma possa te ajudar a sair dessa.");
-        escolha = entrada.next();
-        System.out.println("");
-        if ("a".equalsIgnoreCase(escolha)) {
-         x = equacaoSimples(sorteado);
-          if (x == 8) {
-          game = true;
-          soutGO();
-          break;
-          }else
-          System.out.println("Tudo certo, sua experiência faz com que você voe como se o clima não te impedisse.");
-          System.out.println("");
-          repeticao = true;
-       
-        } else if ("b".equalsIgnoreCase(escolha)) {
-          System.out.println("Você não consegue contato com a torre de controle, seu rádio parece ter parado de funcionar.");
-          System.out.println("");
-        }
-       }
-          System.out.printf("Mas como em um piscar de olhos, os seus instrumentos ficam descontrolados. \n"
-                + "(Ale): - O que houve %s? \n"
-                + "(%s): - Não sei o que houve, isto nunca aconteceu!\n"
-                + "(Ale): - Talvez seja a ilha, os boatos diziam isso. \n"
-                + "(%s):- Amor você sabe que estes boatos não são verdadeiros, \n"
-                + "isso é apenas um fenômeno natural... eu acho. \n"
-                + "O avião começa a perder estabilidade, uma turbulência muito forte começa a afetar a estabilidade do \n"
-                + " avião, Alexandre começa a gritar assustado, você tenta manter a calma e consegue continuar controlando \n"
-                + "o avião e evitando qualquer problema maior; poucos segundos após isto um enorme raio branco acerta o seu \n"
-                + "avião; vocês se assustam e gritam muito, ficam temporariamente cegos, durante isto você para de sentir o \n"
-                + "motor do avião. \n Você agarra o manche na esperança de recuperar o controle: \n \n", nome, nome, nome);
-                x = equacaoMedia(sorteado);
-                 if (x == 8) {
-                  System.out.printf("Você sente algo diferente e logo repara que o avião esta perdendo sustentação e pode não haver mais o que fazer. \n "
-                + "O avião começa a cair como uma pedra.");
-                System.out.println("Você tenta novamente:");
-                System.out.println("");
-                  x = equacaoMedia(sorteado);
-                   if (x == 8) {
-                    System.out.printf(" Nada parece estar dando certo hoje, você falha e o avião continua caindo como uma pedra em direção do oceano. \n"
-                + "Sem conseguir manter o controle do avião você e seu marido estão complemente assustados; a grande nuvem começa \n"
-                + "a desaparecer e na sua frente você vê a ilha ja encontrando o bico do seu avião..... \n \n \n");
-                    soutGO();
-                    game = true;                  
-                    break;
-                   }else{
-                     System.out.printf("Você puxa o manche com toda a sua força e consegue estabilidade novamente, mas ainda sem os motores. \n");
-                   }
-                 }else{
-                   System.out.printf("Você é realmente uma exímio piloto e mantém o avião estável planando sem os motores. \n\n");
-                 }
-                 System.out.printf(" Agora sua missão é conseguir pousar com segurança na ilha.\n\n");
-                 x = equacaoMedia(sorteado);
-                 if(x == 8){
-                   System.out.println("Você ainda esta um pouco abalada pelo que aconteceu e algo esta atrapalhando suas habilidades como piloto, o avião começa a perder sustentação... você agora esta indo em direção a água");
-                   System.out.println("Percebendo que não há mais tempo para um pouso calmo na praia, você tenta pousar de maneira suave sobre a água");
-                   System.out.printf("\n\n");
-                   x = equacaoMedia(sorteado);
-                   if(x == 8){
-                     System.out.printf( "Mesmo tendo uma larga experiência em pousos você não consegue mais controlar esta aeronave e acaba acertando em cheio o oceano e não sobrevive ao impacto....");
-                     soutGO();
-                     game = true;
-                     break;
-                   }else{
-                     System.out.printf("Você consegue com sua ampla experiencia como piloto pousar a aeronave sobre a água de maneira bem turbulenta, porém, segura. \nIsto por sua vez acaba chamando atenção desnecessária. \n Vocês estão próximos a costa, a noite ja esta caindo e nota-se muito movimento na água em torno do avião. \n"
-                    + "Ao olhar pela janela se veem muitos peixes estranhos e criaturas aparentemente hostis:");
-                    System.out.printf("(Ale): - O que devemos fazer %s ? \n"
-                + "(%s):- Vamos esperar, a maré vai nos levar ate a praia em algum tempo. \n"
-                + "(Ale):- Mas isto não é seguro! Vamos tentar nadar até lá.\n"
-                + "(%s):- De forma alguma, o avião vai ser a nossa proteção na ilha.\n\n"
-                + "A noite passa e vocês conseguem restabelecer a calma dentro do possível pois o avião estava “atracado”.\n", nome, nome, nome);
-                   }
-                 }else{
-                   System.out.printf("Com sua grande experiência em pousos você reconhece o melhor local para o pouso na praia e com o \n"
-                + "angulo correto faz a aproximação tendo uma colisão leve e controlada. \n\n"
-                +"(Ale):- %s, finalmente em terra firme, cheguei a achar que as coisas ficariam feias \n"
-                + "(%s):- Por um breve segundo eu também pensei, mas você sabe quem é que manda nesse bebê - você aponta para o avião  \n"
-                + "(Ale):- As vezes acho que você gosta mais desse avião do que de mim... - ele fala com tom de sarcasmo\n"
-                + "(%s):- ATENÇÃO TODOS OS NATIVOS, A RAINHA DO DRAMA ESTA AQUI. - você grita aliviada por saber que estão em um paraíso tropical..seguros afinal\n\n"
-                + "Você monta a poucos metros de distância do avião a barraca que trouxeram para vocês, acende uma fogueira, pega algum alimento e um vinho que estava nas bagagens, estende uma toalha de piquenique sobre o chão e convida-o a se sentar ao seu lado.\n Vocês ficam ali algumas horas, conversando sobre a vida, comendo, bebendo, rindo, depois entram na barraca, se aninham e dormem aguardando o que vos aguarda no dia de amanhã", nome, nome, nome);
-                 }
       }
-      }
+    }
   }
-  
+
   // funcao para instrucoes de como jogar
   static void instrucoes() {
-    System.out.printf("****INSTRUÇÕES**** \n" + "- Este jogo foi pensado para ser jogado de maneira facil e intuitiva. \n"
-        + "- Utilize o teclado para selecionar as opções corretas");
-    System.out.println("- Sempre digite a letra da opção que desejar, seja em uma das escolhas do jogo, seja em uma das contas que lhe serão apresentadas.");
-    System.out.println("- Você terá 3 chances para acertar a resposta das questões, recomenda-se utilizar uma calculadora ou rascunho como auxílio");
-    System.out.println("- Caso desperdice as 3 chances, você sofrerá consequências, as vezes no contexto da história, outras vezes, causando Game Over, e voltando ao menu");
+    System.out
+        .printf("****INSTRUÇÕES**** \n" + "- Este jogo foi pensado para ser jogado de maneira facil e intuitiva. \n"
+            + "- Utilize o teclado para selecionar as opções corretas");
+    System.out.println(
+        "- Sempre digite a letra da opção que desejar, seja em uma das escolhas do jogo, seja em uma das contas que lhe serão apresentadas.");
+    System.out.println(
+        "- Você terá 3 chances para acertar a resposta das questões, recomenda-se utilizar uma calculadora ou rascunho como auxílio");
+    System.out.println(
+        "- Caso desperdice as 3 chances, você sofrerá consequências, as vezes no contexto da história, outras vezes, causando Game Over, e voltando ao menu");
   }
 
   // funcao de creditos que contem os nomes dos criadores do jogo
@@ -914,9 +1145,9 @@ class Main {
   // funcao para poder chamar todas as outras funcoes
   public static void main(String[] args) {
     String n1;
-    
+
     do {
-      
+
       System.out.println("");
       System.out.println("**DISTOPIA MATEMÁTICA**");
       System.out.println("A - INSTRUÇÕES");

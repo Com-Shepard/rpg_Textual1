@@ -375,7 +375,6 @@ class Main {
     }
     return sorteado;
   }
-
   // funcao que contem apenas uma conta de nivel dificil
   static int equacaoDificil(int sorteado) {
     Random random = new Random();
@@ -408,7 +407,6 @@ class Main {
     }
     return sorteado;
   }
-
   // funcao para o confirmador
   static boolean confirmador(String simNao) {
 
@@ -418,7 +416,6 @@ class Main {
     }
     return confirmador;
   }
-
   static int respondendoF(String resposta, String correto, int contador) {
 
     int sorteado = 0;
@@ -451,7 +448,6 @@ class Main {
     }
     return sorteado;
   }
-
   static int respondendoM(String resposta, String correto, int contador) {
 
     int sorteado = 0;
@@ -485,7 +481,6 @@ class Main {
     }
     return sorteado;
   }
-
   static int respondendoD(String resposta, String correto, String correto1, int contador) {
 
     int sorteado = 0;
@@ -514,7 +509,6 @@ class Main {
     }
     return sorteado;
   }
-
   static int ato1H(String nome, String escolha, int sorteado) {
     int x = 0;
     boolean game = false;
@@ -684,12 +678,13 @@ class Main {
     }
     return x;
   }
-
   static int ato2H(String nome, String escolha, int sorteado) {
+    int contGO = 0;
     int x = 0;
     boolean game = false;
     while (game == false) {
-      System.out.printf("Finalmente em solo firme e depois de passarem por um gigantesco problema, vocês começam admirar a paisagem.\n\n"
+      System.out.printf(
+          "Finalmente em solo firme e depois de passarem por um gigantesco problema, vocês começam admirar a paisagem.\n\n"
               + "A ilha é imensamente cheia de arvores, grandes, lindas e com um tom de verde muito agradável, frutas estão por\n"
               + " toda a parte, pássaros belos e nunca antes visto por vocês.\n\n"
               + "(%s): - Bom, pelo visto Sara, nós não teremos problemas com a fome.\n"
@@ -704,10 +699,7 @@ class Main {
             "Vocês entram na mata, e reparam na beleza do ambiente. Depois de alguns minutos vocês chegam em um rio; \n"
                 + "você pega um pouco da água com a mão e bebe.\n\n"
                 + "(%s): - Olha que incrível! Sara isso é potável com certeza.\n"
-                + "(Sara): - Nossa eu não posso acreditar.\n"
-                + "(%s): - Exatamente, tem algo de muito estranho aqui - uma nuvem aparece do nada o motor do avião apaga - precisamos verificar isso para sair daqui.\n"
-                + "(Sara): - Vamos sair daqui sim amor, mas antes vamos andar pela ilha e ver o que ela nos reserva...\n\n",
-            nome, nome);
+                + "(Sara): - Nossa eu não posso acreditar.\n",nome, nome);
         break;
       case "b":
       case "B":
@@ -730,11 +722,11 @@ class Main {
             + "b - Tentar sozinho novamente.\n", nome);
         escolha = entrada.next();
         boolean teste = false;
-        int contGO = 0;
+        contGO = 0;
         while (teste == false) {
           contGO++;
           if (escolha.equalsIgnoreCase("a")) {
-            
+
             x = equacaoSimples(sorteado);
             if (x == 8 && contGO == 2) {
               System.out.printf("\n(Sara): - Deixe isso pra la, não vale a pena.\n"
@@ -751,12 +743,12 @@ class Main {
               teste = true;
               game = true;
               break;
-            }else{
+            } else {
               break;
             }
-         
+
           } else if (escolha.equalsIgnoreCase("b")) {
-           
+
             x = equacaoMedia(sorteado);
             if (x == 8 && contGO == 2) {
               System.out.printf("\n(Sara): - Deixe isso pra la, não vale a pena.\n"
@@ -773,8 +765,7 @@ class Main {
               teste = true;
               game = true;
               break;
-            }
-            else{
+            } else {
               break;
             }
           }
@@ -782,45 +773,235 @@ class Main {
 
       }
       System.out.printf("A porta se abre com uma dificuldade absurda mas tudo da certo; vocês estão dentro do avião agora, \n"
-                + "um cheiro forte de podridão está no ambiente. Existem corpos dentro do avião, parecem estar ali a muito tempo, um deles com o rádio da aeronave nas mãos, \nparece ter tentado entrar em contato com alguém antes de morrer. Você retira o rádio e"
-                + "vocês decidem sair, e voltar para suau aeronave com o este rádio em mãos.\n\nVoltando para a praia com o rádio em mãos vocês, tentam conectar ele no lugar do seu rádio\n\n");
-                x = equacaoMedia(sorteado){
-                  
-                }
+              + "um cheiro forte de podridão está no ambiente. Existem corpos dentro do avião, parecem estar ali a muito tempo, um deles com o rádio da aeronave nas mãos, \nparece ter tentado entrar em contato com alguém antes de morrer. Você retira o rádio e"
+              + "vocês decidem sair, e voltar para suau aeronave com o este rádio em mãos.\n\nVoltando para a praia com o rádio em mãos vocês, tentam conectar ele no lugar do seu rádio\n\n");
+      x = equacaoMedia(sorteado);
+      if (x == 8) {
+        System.out.printf("Uma interferência muito forte aparece do nada, \n"
+            + "uma voz grossa e gutural fala algo que vocês não compreendem.\n" + "Voz estranha:  Was ist das?\n"
+            + "Vocês se assutam, aquela é a única frequencia que tinha sinal.\n\n");
+        System.out.printf("(Sara): - Parece que deu certo!\n" + "(%s): - Acho que sim, vamos testar.\n"
+            + "O rádio aparentimente está funcionando e vocês tentam fazer algum contado, \n"
+            + "vocês começam a pedir ajuda em todas as frequencias e uma única responde.\n"
+            + "(Voz estranha): - Was ist das?\n" + "(Sara): - O que ele disse?\n"
+            + "(%s): - Eu não faço a minima ideia, mas de qualquer forma isso é bom.\n"
+            + "Tentativas e tentativas de dialogo com  a voz estranha e nada acontece, aquela pessoa parou de responder.\n"
+            + "(Sara): - Isso é muito estranho!\n\n",nome,nome);
+      } else {
+        System.out.printf("(Sara): - Parece que deu certo!\n" + "(%s): - Acho que sim, vamos testar.\n"
+            + "O rádio aparentimente está funcionando e vocês tentam fazer algum contado, \n"
+            + "vocês começam a pedir ajuda em todas as frequencias e uma única responde.\n"
+            + "(Voz estranha): - Was ist das?\n" + "(Sara): - O que ele disse?\n"
+            + "(%s): - Eu não faço a minima ideia, mas de qualquer forma isso é bom.\n"
+            + "Tentativas e tentativas de dialogo com  a voz estranha e nada acontece, aquela pessoa parou de responder.\n"
+            + "(Sara): - Isso é muito estranho!\n\n",nome,nome);
+      }
+      System.out.printf(
+          "Após este contato estranho vocês pensam em tentar ligar o avião e fugir dali o mais rapido o possivel, \n"
+              + "após muitas tentativas o avião não liga.\n\n" + "(Sara): - Vamos logo, o que há de errado?\n"
+              + "(%s): - Eu não faço a minima ideia, podem ser as baterias.\n\nVocê tenta utilizar seus conhecimentos de mecânica:\n",
+          nome);
+      x = equacaoSimples(sorteado);
+      if (x == 8) {
+        System.out.printf("Você acaba não tendo a minima ideia do problema que o avião tem.\n\n"
+            + "(%s): - Eu não tenho ideia do que pode ser, que droga!\n"
+            + "(Sara): - Calma meu amor, nós vamos conseguir descobrir este problema, "
+            + "você não acha que podem ser as baterias?\n" + "(%s): - EXCELENTE IDEIA.\n"
+            + "Você vira subtamente para trás puxa a tampa de proteção das baterias e repara que elas estão todas escuras e \n"
+            + "com uma certa fuligem.\n" + "(%s): - Olhe só.... \n"
+            + "(Sara): - Você achou o problema; o raio deve Ter sobrecarregado elas, por isso o avião apagou. Hahahaha, \n"
+            + "vamos pegar aquelas baterias e fugir daqui.\n", nome, nome, nome);
+      } else {
+        System.out.printf(
+            "Você repara que as baterias estão com problemas, o avião nem da sinal de qualquer eletricidade.\n\n"
+                + "(Sara): E aí? O que houve agora?\n" + "(%s): Não sei ao certo, mas com certeza são as baterias.\n"
+                + "(Sara):Vamos pegar as baterias do mesmo avião que pegamos o radio!\n" + "(%s):Vamos agora!\n",
+            nome, nome);
+      }
 
+      System.out.printf("Vocês partem em disparada ate a clareira onde se encontravam aquele aviões, \n"
+          + "chegando la vocês entram no mesmo avião de antes, correm para o fundo procurando o \n"
+          + "compartimento das bateias e encontram.\n\n" + "(%s): - ACHAMOS!\n"
+          + "(Sara): - Más será que elas funcionam? \n" + "(%s): - Talvez sim, talvez não! Mas a gente da um jeito.\n"
+          + "(Sara): - Vamos levar elas para o avião então.\n",nome,nome);
+      x = equacaoMedia(sorteado);
+
+      if (x == 8) {
+        System.out.printf("\nVocês não conseguem remover as baterias, mas sua esposa subtamente tem uma ideia de \n"
+            + "usar um pé de cabra que estava ali perto para deslocar-las \n" + "Pegar o pé de cabra?\n\n" + "a) Sim\n"
+            + "b) Não\n");
+        escolha = entrada.next();
+
+        switch (escolha) {
+        case "a":
+        case "A":
+          boolean teste = false;
+          contGO = 0;
+
+          while (teste == false) {
+            contGO++;
+            x = equacaoSimples(sorteado);
+            if (x == 8 && contGO == 1) {
+              System.out.printf(
+                  "(Sara): - Fica calmo amor, a gente vai conseguir!\n\nSua cabeça começa a girar e tudo começa a escurecer, você se prende ao momento e tenta novamente.");
+            } else if (x == 8 && contGO == 2) {
+              System.out.printf(
+                  "Você sente suas mãos tremerem, e sua visão fica turva, você escuta um zunido e bem ao fundo sua esposa gritando desesperada.....\n");
+              teste = true;
+              game = true;
+              break;
+            }else{
+              System.out.printf("Vocês conseguem tirar as baterias com uma certa facilidade, elas parecem novas.\n\n");
+              teste = true;
+              break;
+            }
+          }
+            System.out.printf("Após este longo e cansativo trabalho vocês estão estasiados de emoção voltando para o seu avião; \n"
+                + "a tarde começa a virar noite e tudo começa a ficar escuro, apenas a luz da lua irá \n"
+                + "ajudar vocês neste momento.\n"
+                + "Chegando no avião vocês substituem a bateira antiga pela a que foi trazida\n\n"
+                + "(Sara): - Vamos amor ligue o avião e vamos embora.\n\nVocê começa tenta instalar a bateria.\n\n");
+                
+                x = equacaoDificil(sorteado);
+                if(x==8){
+                  System.out.printf("As baterias não fucionam e vocês descem do avião e tantão gerar carga nelas girando a helice do avião, \n"
+                + "depois de muito esforço o avião liga produzindo um barulho quase ensurdecedor, \n"
+                + "homens e mulheres cercam vocês, Sara é capturada por eles e você é nocauteado logo após desligar o avião.\n");
+                }else{
+                  System.out.print("As baterias por mais incrivel que pareça, ainda tem um pouco de carga, que é o suficiente \n"
+                + "para ligar o avião. Em um lampejo de esperança e uma alegria jamais antes sentida, vocês sentem que irão para casa, \n"
+                + "mas quando vocês olham em volta, homens e mulheres estão lhes cercando, você até tenta começar a andar com o \n"
+                + "avião mas eles pegam Sara e golpeiam você, fazendo com que desmaie.\n\n");
+                }
+          
+        }
+      }
+      break;
     }
     return x;
   }
-
-  static void ato3H(String nome, String escolha, int sorteado) {
-    System.out.printf("Depois deste momento horrivel você acorda ainda na praia, o avião continua ali, intacto, você levanta olha em \n"  
-                + "volta meio assustado e um pouco tonto por causa do impacto, depois de olhar em volta você confere o combustivel \n"
-                + "do avião e repara que tem o suficiente para a volta para casa, determidado como um herói você pega o rádio e \n"
-                + "grita em alto em bom som: ");
-                System.out.printf("((%s)): EU (%s), QUERO MINHA ESPOSA DE VOLTA!\n", nome);
-                System.out.printf("Pelo rádio você escuta gritos e grunidos graves, os gritos são de sua esposa e os grunidos que não podem ser \n"
-                + "compreendidos são daqueles homens e mulheres que a capturaram.\n"
-                + "Obstinado, você corre para dentro da mata gritando pelo nome de sua esposa.\n"
-                + "((%s)): SARA ONDE VOCÊ ESTÁ!?\n", nome);
-                System.out.printf("E quanto mais corre para dentro da mata, os barulhos aumentam e você a encontra presa em uma árvore cercada pelos nativos.\n"
-                + "Neste momento Sara tenta se soltar enquanto os nativos vão em sua direção de maneira calma\n");
-                x = equacaoMedia(sorteado);
-                if (x==8){
-                  System.out.printf("você os atrae para longe dela, correndo para a direção da praia\n"
-                + "((%s)): SARA SE SOLTA E VENHA PARA O AVIÃO!\n"
-                + "Com uma pedra que estava ao seu lado Sara consegue cortar as cordas e faz o que lhe foi dito.\n");
-                }
-                else {
-                  System.out.printf("Sara se solta e pede para que você vá para o avião.\n"
-                + "(Sara): Corra para o avião eu te encontro lá! \n"
-                + "Com uma pedra que estava ao seu lado, Sara consegue cortar as cordas e faz o que lhe foi dito.\n");
-                }
-
-
-
+  static int ato3H(String nome, String escolha, int sorteado) {
+    int x = 0, contGO = 0;
+     boolean game = false;
+    while (game == false) {
+    System.out.printf(
+        "Depois deste momento horrivel você acorda ainda na praia, o avião continua ali, intacto, você levanta olha em \n"
+            + "volta meio assustado e um pouco tonto por causa do impacto, depois de olhar em volta você confere o combustivel \n"
+            + "do avião e repara que tem o suficiente para a volta para casa, determidado como um herói você pega o rádio e \n"
+            + "grita em alto em bom som: ");
+    System.out.printf("((%s)): EU (%s), QUERO MINHA ESPOSA DE VOLTA!\n", nome,nome);
+    System.out.printf(
+        "Pelo rádio você escuta gritos e grunidos graves, os gritos são de sua esposa e os grunidos que não podem ser \n"
+            + "compreendidos são daqueles homens e mulheres que a capturaram.\n"
+            + "Obstinado, você corre para dentro da mata gritando pelo nome de sua esposa.\n"
+            + "((%s)): SARA ONDE VOCÊ ESTÁ!?\n",nome);
+    System.out.printf(
+        "E quanto mais corre para dentro da mata, os barulhos aumentam e você a encontra presa em uma árvore cercada pelos nativos.\n"
+            + "Neste momento Sara tenta se soltar enquanto os nativos vão em sua direção de maneira calma.\n");
+    x = equacaoMedia(sorteado);
+    if (x == 8) {
+      System.out.printf("Você os atrai para longe dela, correndo para a direção da praia\n"
+          + "((%s)): SARA SE SOLTA E VENHA PARA O AVIÃO!\n"
+          + "Com uma pedra que estava ao seu lado Sara consegue cortar as cordas e faz o que lhe foi dito.\n",nome);
+    } else {
+      System.out.printf(
+          "Sara se solta e pede para que você vá para o avião.\n" + "(Sara): Corra para o avião eu te encontro lá! \n"
+              + "Com uma pedra que estava ao seu lado, Sara consegue cortar as cordas e faz o que lhe foi dito.\n");
+    }
+    break;
+    }
+    return x;
 
   }
+  static int atoFinalH(String nome, String escolha, int sorteado) {
+    int x = 0;
+     boolean game = false;
+    while (game == false) {
+    System.out.printf("Você chega a praia sendo perseguido por todos os nativos\n");
+    x = equacaoSimples(sorteado);
+    if (x == 8) {
+      System.out.printf(
+          "Você cai para dentro do avião e os nativos\n" + "se aproximam cada vez mais. E você tenta o mais rápido se\n"
+              + "levantar mesmo com dores, e sentar no banco da esquerda, a frente do manche.\n");
+      System.out.printf("a) esperar por Sara.\n" + "b) começar a andar com o avião, sem esperar por ela. \n");
+      String resp1 = entrada.next();
+      switch (resp1) {
+      case "a":
+        System.out.printf("Os nativos estão cada vez mais próximos, e Sara ainda não chegou a praia.");
+        System.out.printf("");
+        System.out.printf("");
+        System.out.printf("E ai, quando tudo \n"
+            + "parece estar perdido Sara aparece correndo, e sem pensar duas vezes você alinha o avião e vai na direção dela, \n"
+            + "a cada momento o avião está mais rapido e ela mais próxima, não há mais como diminuir a velocidade e ela reparou nisto. \n"
+            + "Ela se prepara para pular e agarrar a asa do avião\n");
+        x = equacaoDificil(sorteado);
+        if (x == 8) {
+          System.out.printf("(%s) por um instante você põe mais da metade de seu corpo para fora do \n"
+              + "avião e agarra Sara que estava se segurando na asa do avião trazendo ela para dentro.\n"
+              + "((%s)): Conseguimos amor, vamos para casa!!\n"
+              + "(%s) consegue levantar vôo e finalmente, depois de todo este sufoco finalmente conseguem ir para casa. \n",
+              nome, nome, nome);
+        } else {
+          System.out.printf("Você consegue pular e pegar o avião em movimento, ela sobe pela asa enquanto você abre a porta para ela.\n"
+                  + "(Sara): Conseguimos amor, vamos para casa!!\n" + "(%s): Conseguimos! Vamos! Entra logo!\n"
+                  + "Sara consegue entrar no no avião. Finalmente eles se abraçam com muita força e conseguem finalmente levantar \n"
+                  + "vôo e voltar para casa.\n",nome,nome);
+                  game = true;
+        }
+        break;
+      case "b":
+        System.out.printf(
+            "Você começa a movimentar o avião devagar procurando por Sara enquanto os nativos tentam te alcançar, \n"
+                + "após atravessar metade da praia você avista ela te esperando bem mais a frente, os nativos não aguentam acompanhar \n"
+                + " o avião e começam a desistir de ir atras do avião, alguns começam a cair, outros estão exaustos. \n"
+                + "Você acelera mais e para ao lado dela; após Sara estar a bordo você levanta vôo e vai em direção ao \n"
+                + "horizonte com uma sensação de vitória e felicidade enorme no peito.\n");
+        break;
 
+      }
+    } else {
+      System.out.printf("Como um atleta você pula para dentro do avião e o liga.\n");
+      System.out.printf("a) esperar por Sara.\n" + "b) começar a andar com o avião, sem esperar por ela. \n");
+      escolha = entrada.next();
+      switch (escolha) {
+      case "a":
+        System.out.printf("Os nativos estão cada vez mais próximos, e Sara ainda não chegou a praia.");
+        System.out.printf("");
+        System.out.printf("");
+        System.out.printf("E ai, quando tudo \n"
+            + "parece estar perdido Sara aparece correndo, e sem pensar duas vezes você alinha o avião e vai na direção dela, \n"
+            + "a cada momento o avião está mais rapido e ela mais próxima, não há mais como diminuir a velocidade e ela reparou nisto. \n"
+            + "Ela se prepara para pular e agarrar a asa do avião\n");
+        x = equacaoDificil(sorteado);
+        if (x == 8) {
+          System.out.printf("(%s) por um instante você põe mais da metade de seu corpo para fora do \n"
+              + "avião e agarra Sara que estava se segurando na asa do avião trazendo ela para dentro.\n"
+              + "((%s)): Conseguimos amor, vamos para casa!!\n"
+              + "(%s) consegue levantar vôo e finalmente, depois de todo este sufoco finalmente conseguem ir para casa. \n",
+              nome, nome, nome);
+              game = true;
+        } else {
+          System.out.printf("Você consegue pular e pegar o avião em movimento, ela sobe pela asa enquanto você abre a porta para ela.\n"
+                  + "(Sara): Conseguimos amor, vamos para casa!!\n" + "(%s): Conseguimos! Vamos! Entra logo!\n"
+                  + "Sara consegue entrar no no avião. Finalmente eles se abraçam com muita força e conseguem finalmente levantar \n"
+                  + "vôo e voltar para casa.\n",nome,nome);
+                  game = true;
+        }
+        break;
+      case "b":
+        System.out.printf(
+            "Você começa a movimentar o avião devagar procurando por Sara enquanto os nativos tentam te alcançar, \n"
+                + "após atravessar metade da praia você avista ela te esperando bem mais a frente, os nativos não aguentam acompanhar \n"
+                + " o avião e começam a desistir de ir atras do avião, alguns começam a cair, outros estão exaustos. \n"
+                + "Você acelera mais e para ao lado dela; após Sara estar a bordo você levanta vôo e vai em direção ao \n"
+                + "horizonte com uma sensação de vitória e felicidade enorme no peito.\n");
+                game = true;
+        break;
+      }
+    }
+    }
+    return x;
+  }
   static int ato1M(String nome, String escolha, int sorteado) {
     int x = 0;
     boolean game = false;
@@ -986,36 +1167,347 @@ class Main {
                 + "Você monta a poucos metros de distância do avião a barraca que trouxeram para vocês, acende uma fogueira, pega algum alimento e um vinho que estava nas bagagens, estende uma toalha de piquenique sobre o chão e convida-o a se sentar ao seu lado.\n Vocês ficam ali algumas horas, conversando sobre a vida, comendo, bebendo, rindo, depois entram na barraca, se aninham e dormem aguardando o que vos aguarda no dia de amanhã",
             nome, nome, nome);
       }
+      break;
+    }
+    return x;
+  }
+  static int ato2M(String nome, String escolha, int sorteado){
+   int x = 0, contGO = 0;;
+    boolean game = false;
+    while (game == false) {
+      System.out.printf(
+          "Finalmente em solo firme e depois de passarem por um gigantesco problema, vocês começam admirar a paisagem.\n\n"
+              + "A ilha é imensamente cheia de arvores, grandes, lindas e com um tom de verde muito agradável, frutas estão por\n"
+              + " toda a parte, pássaros belos e nunca antes visto por vocês.\n\n"
+              + "(%s): - Bom, pelo visto Ale, nós não teremos problemas com a fome.\n"
+              + "(Ale): - Nem com água, olhe ali, parece que é um lago.\n\n" + "a - Ir ver se a água é doce\n"
+              + "b - Ficar pela praia\n\n",
+          nome);
+      escolha = entrada.next();
+      switch (escolha) {
+      case "a":
+      case "A":
+        System.out.printf(
+            "Vocês entram na mata, e reparam na beleza do ambiente. Depois de alguns minutos vocês chegam em um rio; \n"
+                + "você pega um pouco da água com a mão e bebe.\n\n"
+                + "(%s): - Olha que incrível! Ale isso é potável com certeza.\n"
+                + "(Ale): - Nossa eu não posso acreditar.\n"
+                + "(%s): - Exatamente, tem algo de muito estranho aqui - uma nuvem aparece do nada o motor do avião apaga - precisamos verificar isso para sair daqui.\n"
+                + "(Ale): - Vamos sair daqui sim amor, mas antes vamos andar pela ilha e ver o que ela nos reserva...\n\n",
+            nome, nome);
+        break;
+      case "b":
+      case "B":
+        System.out.printf("(Ale): - Eu acho bom nós andarmos pela ilha para ver o que nos espera.\n"
+            + "(%s): - Ok, vamos pela praia.\n"
+            + "Andando pela praia vocês encontram na areia algumas marcas estranhas pintadas nas pedras. Ale fala sobre a possibilidade de existirem nativos na região.\n"
+            + "E por um breve momento você tem a sensação de estar sendo observado.\n\n", nome);
+        break;
+      }
+      System.out.printf(
+          "Após uma longa caminhada vocês chegam em uma clareira e o que vocês presenciam é incrível e quase inacreditável. \n"
+              + "Aviões antigos e aviões modernos uma diversidade de anos e modelos; aquilo se aproximaria de um museu.\n\n"
+              + "(%s): - Meu Deus meu bem, isso é inacreditável!\n" + "(Ale): - Eu estou sem palavras.\n"
+              + "(%s): - Vamos ver se existe alguma coisa que podemos aproveitar aqui.\n\n"
+              + "Vocês chegam a porta de um avião e você tenta girar a trava.\n\n",
+          nome, nome);
+      x = equacaoMedia(sorteado);
+      if (x == 8) {
+        System.out.printf("(%s): isso esta muito difícil, não vou conseguir.\n\n" + "a - Pedir ajuda a o Ale.\n"
+            + "b - Tentar sozinho novamente.\n", nome);
+        escolha = entrada.next();
+        boolean teste = false;
+        contGO = 0;
+        while (teste == false) {
+          contGO++;
+          if (escolha.equalsIgnoreCase("a")) {
 
+            x = equacaoSimples(sorteado);
+            if (x == 8 && contGO == 2) {
+              System.out.printf("\n(Ale): - Deixe isso pra la, não vale a pena.\n"
+                  + "(%s): - Nós realmente precisamos pegar este, este avião parece mais inteiro do que os outros.\n\n Você sente sua cabeça doer, mas tenta mais uma vez.\n\n",
+                  nome);
+            } else if (x == 8 && contGO == 1) {
+              System.out.printf("\n(Ale): - Deixe isso, vamos voltar.\n"
+                  + "(%s): - De jeito nenhum, nosso rádio parou de funcionar e precisamos pegar o que esta ai dentro.\n",
+                  nome);
+            } else if (x == 8 && contGO == 3) {
+              System.out.printf("\n(Ale): - Amor, você esta bem????.\n"
+                  + "(%s): - Acho que.....exagerei......\n\n Você forçou demais sua mente, algo esta errado, sua cabeça esta latejando de dor e você não sente mais seus membros.",
+                  nome);
+              teste = true;
+              game = true;
+              break;
+            } else {
+              break;
+            }
+
+          } else if (escolha.equalsIgnoreCase("b")) {
+
+            x = equacaoMedia(sorteado);
+            if (x == 8 && contGO == 2) {
+              System.out.printf("\n(Ale): - Deixe isso pra la, não vale a pena.\n"
+                  + "(%s): - Nós realmente precisamos pegar este, este avião parece mais inteiro do que os outros.\n\n Você sente sua cabeça doer, mas tenta mais uma vez.\n\n",
+                  nome);
+            } else if (x == 8 && contGO == 1) {
+              System.out.printf("\n(Ale): - Deixe isso, vamos voltar.\n"
+                  + "(%s): - De jeito nenhum, nosso rádio parou de funcionar e precisamos pegar o que esta ai dentro.\n",
+                  nome);
+            } else if (x == 8 && contGO == 3) {
+              System.out.printf("\n(Ale): - Amor, você esta bem????.\n"
+                  + "(%s): - Acho que.....exagerei......\n\n Você forçou demais sua mente, algo esta errado, sua cabeça esta latejando de dor e você não sente mais seus membros.",
+                  nome);
+              teste = true;
+              game = true;
+              break;
+            } else {
+              break;
+            }
+          }
+        }
+
+      }
+      System.out
+          .printf("A porta se abre com uma dificuldade absurda mas tudo da certo; vocês estão dentro do avião agora, \n"
+              + "um cheiro forte de podridão está no ambiente. Existem corpos dentro do avião, parecem estar ali a muito tempo, um deles com o rádio da aeronave nas mãos, \nparece ter tentado entrar em contato com alguém antes de morrer. Você retira o rádio e"
+              + "vocês decidem sair, e voltar para suau aeronave com o este rádio em mãos.\n\nVoltando para a praia com o rádio em mãos vocês, tentam conectar ele no lugar do seu rádio\n\n");
+      x = equacaoMedia(sorteado);
+      if (x == 8) {
+        System.out.printf("Caso erre: uma interferência muito forte aparece do nada, \n"
+            + "uma voz grossa e gutural fala algo que vocês não compreendem.\n" + "Voz estranha:  Was ist das?\n"
+            + "Vocês se assutam, aquela é a única frequencia que tinha sinal.\n\n");
+            System.out.printf("(Ale): - Parece que deu certo!\n"
+                + "(%s): - Acho que sim, vamos testar.\n"
+                + "O rádio aparentimente está funcionando e vocês tentam fazer algum contado, \n"
+                + "vocês começam a pedir ajuda em todas as frequencias e uma única responde.\n"
+                + "(Voz estranha): - Was ist das?\n"
+                + "(Ale): - O que ele disse?\n"
+                + "(%s): - Eu não faço a minima ideia, mas de qualquer forma isso é bom.\n"
+                + "Tentativas e tentativas de dialogo com  a voz estranha e nada acontece, aquela pessoa parou de responder.\n"
+                + "(Ale): - Isso é muito estranho!\n\n",nome,nome);
+      }else{
+        System.out.printf("(Ale): - Parece que deu certo!\n"
+                + "(%s): - Acho que sim, vamos testar.\n"
+                + "O rádio aparentimente está funcionando e vocês tentam fazer algum contado, \n"
+                + "vocês começam a pedir ajuda em todas as frequencias e uma única responde.\n"
+                + "(Voz estranha): - Was ist das?\n"
+                + "(Ale): - O que ele disse?\n"
+                + "(%s): - Eu não faço a minima ideia, mas de qualquer forma isso é bom.\n"
+                + "Tentativas e tentativas de dialogo com  a voz estranha e nada acontece, aquela pessoa parou de responder.\n"
+                + "(Ale): - Isso é muito estranho!\n\n",nome,nome);
+      }
+      System.out.printf("Após este contato estranho vocês pensam em tentar ligar o avião e fugir dali o mais rapido o possivel, \n"
+                + "após muitas tentativas o avião não liga.\n\n"
+                + "(Ale): - Vamos logo, o que há de errado?\n"
+                + "(%s): - Eu não faço a minima ideia, podem ser as baterias.\n\nVocê tenta utilizar seus conhecimentos de mecânica:\n",nome);
+                x=equacaoSimples(sorteado);
+                if(x==8){
+                  System.out.printf("Você acaba não tendo a minima ideia do problema que o avião tem.\n\n"
+                + "(%s): - Eu não tenho ideia do que pode ser, que droga!\n"
+                + "(Ale): - Calma meu amor, nós vamos conseguir descobrir este problema, "
+                + "você não acha que podem ser as baterias?\n"
+                + "(%s): - EXCELENTE IDEIA.\n"
+                + "Você vira subtamente para trás puxa a tampa de proteção das baterias e repara que elas estão todas escuras e \n"
+                + "com uma certa fuligem.\n"
+                + "(%s): - Olhe só.... \n"
+                + "(Ale): - Você achou o problema; o raio deve Ter sobrecarregado elas, por isso o avião apagou. Hahahaha, \n"
+                + "vamos pegar aquelas baterias e fugir daqui.\n",nome,nome,nome);
+                }else{
+                  System.out.printf("Você repara que as baterias estão com problemas, o avião nem da sinal de qualquer eletricidade.\n\n"
+                + "(Ale): E aí? O que houve agora?\n"
+                + "(%s): Não sei ao certo, mas com certeza são as baterias.\n"
+                + "(Ale):Vamos pegar as baterias do mesmo avião que pegamos o radio!\n"
+                + "(%s):Vamos agora!\n",nome,nome);
+                }
+
+                System.out.printf("Vocês partem em disparada ate a clareira onde se encontravam aquele aviões, \n"
+                + "chegando la vocês entram no mesmo avião de antes, correm para o fundo procurando o \n"
+                + "compartimento das bateias e encontram.\n\n"
+                + "(%s): - ACHAMOS!\n"
+                + "(Ale): - Más será que elas funcionam? \n"
+                + "(%s): - Talvez sim, talvez não! Mas a gente da um jeito.\n"
+                + "(Ale): - Vamos levar elas para o avião então.\n",nome,nome);
+                x = equacaoMedia(sorteado);
+
+                if (x == 8) {
+        System.out.printf("\nVocês não conseguem remover as baterias, mas seu esposo subtamente tem uma ideia de \n"
+            + "usar um pé de cabra que estava ali perto para deslocar-las \n" + "Pegar o pé de cabra?\n\n" + "a) Sim\n"
+            + "b) Não\n");
+        escolha = entrada.next();
+
+        switch (escolha) {
+        case "a":
+        case "A":
+          boolean teste = false;
+          contGO = 0;
+
+          while (teste == false) {
+            contGO++;
+            x = equacaoSimples(sorteado);
+            if (x == 8 && contGO == 1) {
+              System.out.printf(
+                  "(Ale): - Fica calma amor, a gente vai conseguir!\n\nSua cabeça começa a girar e tudo começa a escurecer, você se prende ao momento e tenta novamente.");
+            } else if (x == 8 && contGO == 2) {
+              System.out.printf(
+                  "Você sente suas mãos tremerem, e sua visão fica turva, você escuta um zunido e bem ao fundo e seu esposo gritando desesperado.....\n");
+              teste = true;
+              game = true;
+              break;
+            }else{
+              System.out.printf("Vocês conseguem tirar as baterias com uma certa facilidade, elas parecem novas.\n\n");
+              teste = true;
+              break;
+            }
+          }
+            System.out.printf("Após este longo e cansativo trabalho vocês estão estasiados de emoção voltando para o seu avião; \n"
+                + "a tarde começa a virar noite e tudo começa a ficar escuro, apenas a luz da lua irá \n"
+                + "ajudar vocês neste momento.\n"
+                + "Chegando no avião vocês substituem a bateira antiga pela a que foi trazida\n\n"
+                + "(Ale): - Vamos amor ligue o avião e vamos embora.\n\nVocê começa tenta instalar a bateria.\n\n");
+                
+                x = equacaoDificil(sorteado);
+                if(x==8){
+                  System.out.printf("As baterias não fucionam e vocês descem do avião e tantão gerar carga nelas girando a helice do avião, \n"
+                + "depois de muito esforço o avião liga produzindo um barulho quase ensurdecedor, \n"
+                + "homens e mulheres cercam vocês, Ale é capturado por eles e você é nocauteado logo após desligar o avião.\n");
+                }else{
+                  System.out.print("As baterias por mais incrivel que pareça, ainda tem um pouco de carga, que é o suficiente \n"
+                + "para ligar o avião. Em um lampejo de esperança e uma alegria jamais antes sentida, vocês sentem que irão para casa, \n"
+                + "mas quando vocês olham em volta, homens e mulheres estão lhes cercando, você até tenta começar a andar com o \n"
+                + "avião mas eles pegam Ale e golpeam você, fazendo com que desmaie.\n\n");
+                }
+        }
+        }
+        break;
+                }
+                return x;
+  }
+  static int ato3M(String nome, String escolha, int sorteado) {
+   int x = 0;
+    boolean game = false;
+    while (game == false) {
+    System.out.printf("Depois deste momento horrivel você acorda ainda na praia, o avião continua ali, intacto, você levanta olha em \n"
+            + "volta meio assustada e um pouco tonta por causa do impacto, depois de olhar em volta você confere o combustivel \n"
+            + "do avião e repara que tem o suficiente para a volta para casa, determidada como uma heróina, você pega o rádio e \n"
+            + "grita em alto em bom som: ");
+    System.out.printf("((%s)): EU (%s), QUERO MEU ESPOSO DE VOLTA!\n", nome,nome);
+    System.out.printf("Pelo radio você escuta gritos e grunidos graves, os gritos são de seu marido e os grunidos que não podem ser \n"
+            + "compriendidos são daqueles homens e mulheres que o capturaram.\n"
+            + "Obstinada, você corre para dentro da mata gritando pelo nome de dele.\n"
+            + "((%s)): ALEXANDRE ONDE VOCÊ ESTÁ!?\n",nome);
+    System.out.printf("E quanto mais corre para dentro da mata, mais os barulhos aumentam e você o encontra preso em uma árvore cercado pelos nativos.\n"
+            + "Neste momento Ale tenta se soltar enquanto os nativos vão em sua direção de maneira calma\n");
+    x = equacaoMedia(sorteado);
+    
+    if (x == 8) {
+      System.out.printf("você os atrai para longe dele, correndo para a direção da praia.\n"
+          + "((%s)): ALEXANDRE, SE SOLTA E VENHA PARA O AVIÃO!\n"
+          + "Com uma pedra que estava ao lado de Ale, ele consegue cortar as cordas e faz o que lhe foi dito.\n",nome);
+    } else {
+      System.out.printf("Ale se solta e pede para que você vá para o avião.\n"
+          + "(Ale): Corra para o avião eu te encontro lá! \n"
+          + "Com uma pedra que estava ao seu lado, Ale consegue cortar as cordas e faz o que lhe foi dito.\n");
+    }
+    break;
+    }
+    return x;
+  }
+  static int atoFinalM(String nome, String escolha, int sorteado){
+    int x = 0;
+    boolean game = false;
+    while (game == false) {
+
+    System.out.printf("Você chega a praia sendo perseguida por todos os nativos");
+    x = equacaoSimples(sorteado);
+    if (x==8){
+      System.out.printf("Você cai para dentro do avião e os nativos\n"
+       +"se aproximam cada vez mais. E você tenta o mais rápido se\n" 
+       +"levantar mesmo com dores, e sentar no banco da esquerda, a frente do manche.\n");
+      System.out.printf("a) esperar por Alexandre.\n"
+                + "b) começar a andar com o avião, sem esperar por ele. \n");
+      String resp1 = entrada.next();
+      switch (resp1){
+        case "a":
+                 System.out.printf("Os nativos estão cada vez mais próximos, e Alexandre ainda não chegou a praia.");
+                 System.out.printf("");
+                 System.out.printf("");
+                 System.out.printf("E ai, quando tudo \n"
+                + "parece estar perdido Alexandre aparece correndo, e sem pensar duas vezes você alinha o avião e vai na direção dele, \n"
+                + "a cada momento o avião está mais rápido e ele mais próximo, não há mais como diminuir a velocidade e ele reparou nisto. \n"
+                + "Ele se prepara para pular e agarrar a asa do avião\n");
+                x = equacaoDificil(sorteado);
+                if (x==8){
+                  System.out.printf("(%s) por um instante você põe mais da metade de seu corpo para fora do \n"
+                + "avião e agarra Alexandre que estava se segurando na asa do avião, ajudando ele a conseguir entrar.\n"
+                + "((%s)): Conseguimos amor, vamos para casa!!\n"
+                + "(%s) consegue levantar vôo e finalmente, depois de todo este sufoco finalmente conseguem ir para casa. \n",nome, nome, nome);
+                }
+                else {
+                  System.out.printf("Alexandre consegue pular e pegar o avião em movimento, ele sobe pela asa enquanto você abre a porta para ele.\n"
+                + "(Ale): Conseguimos amor, vamos para casa!!\n"
+                + "(%s): Conseguimos! Vamos! Entra logo!\n"
+                + "Alexandre consegue entrar no avião. Finalmente eles se abraçam com muita força e conseguem finalmente levantar \n"
+                + "vôo e voltar para casa.\n");
+                }
+                 break;
+        case "b":
+                 System.out.printf("Você começa a movimentar o avião devagar procurando por Alexandre enquanto os nativos tentam te alcançar, \n"
+                + "após atravessar metade da praia você avista ele te esperando bem mais a frente e os nativos não aguentam acompanhar \n"
+                + " o avião e começam a desistir. Alguns começam a cair, outros estão exaustos. \n"
+                + "Você acelera mais e para ao lado dele; após Alexandre estar a bordo, você levanta vôo e vai em direção ao \n"
+                + "horizonte com uma sensação de vitória e felicidade enorme no peito.\n");
+                break;   
+        default:
+                System.out.println("Opção invalida");     
+      }           
+    }
+    else {
+      System.out.printf("Como uma atleta você pula para dentro do avião e o liga.");
+      System.out.printf("a) esperar por Alexandre.\n"
+                + "b) começar a andar com o avião, sem esperar por ele. \n");
+      escolha = entrada.next();
+      switch (escolha){
+        case "a":
+                 System.out.printf("Os nativos estão cada vez mais próximos, e Alexandre ainda não chegou a praia.");
+                 System.out.printf("");
+                 System.out.printf("");
+                 System.out.printf("E ai, quando tudo \n"
+                + "parece estar perdido Ale aparece correndo, e sem pensar duas vezes você alinha o avião e vai na direção dele, \n"
+                + "a cada momento o avião está mais rápido e ele mais próximo, não há mais como diminuir a velocidade e ele reparou nisto. \n"
+                + "Ele se prepara para pular e agarrar a asa do avião\n");
+                x = equacaoDificil(sorteado);
+                if (x==8){
+                  System.out.printf("(%s) por um instante você põe mais da metade de seu corpo para fora do \n"
+                + "avião e agarra Alexandre que estava se segurando na asa do avião ajudando ele a entrar.\n"
+                + "(Ale): Conseguimos amor, vamos para casa!!\n"
+                + "(%s) consegue levantar vôo e finalmente, depois de todo este sufoco finalmente conseguem ir para casa. \n",nome, nome, nome);
+                }
+                else {
+                  System.out.printf("Alexandre consegue pular e pegar o avião em movimento, ele sobe pela asa enquanto você abre a porta para ele.\n"
+                + "(Alexandre): Conseguimos amor, vamos para casa!!\n"
+                + "(%s): Conseguimos! Vamos! Entra logo!\n"
+                + "Alexandre consegue entrar no avião. Finalmente eles se abraçam com muita força e conseguem finalmente levantar \n"
+                + "vôo e voltar para casa.\n",nome);
+                }
+                 break;
+        case "b":
+                 System.out.printf("Você começa a movimentar o avião devagar procurando por Alexandre enquanto os nativos tentam te alcançar, \n"
+                + "após atravessar metade da praia você avista ele te esperando bem mais a frente, os nativos não aguentam acompanhar \n"
+                + " e começam a desistir de ir atras do avião, alguns começam a cair, outros estão exaustos. \n"
+                + "Você acelera mais e para ao lado dele; após Alexandre estar a bordo você levanta vôo e vai em direção ao \n"
+                + "horizonte com uma sensação de vitória e felicidade enorme no peito.\n");
+                break;
+        default:
+                System.out.println("Opção invalida");
+
+      
+    }
+    }
+    break;
     }
     return x;
   }
 
-  static int ato3M(String nome, String escolha, int sorteado){
-    System.out.printf("Depois deste momento horrivel você acorda ainda na praia, o avião continua ali, intacto, você levanta olha em \n"  
-                + "volta meio assustada e um pouco tonta por causa do impacto, depois de olhar em volta você confere o combustivel \n"
-                + "do avião e repara que tem o suficiente para a volta para casa, determidada como uma heróina, você pega o rádio e \n"
-                + "grita em alto em bom som: ");
-                System.out.printf("((%s)): EU (%s), QUERO MEU ESPOSO DE VOLTA!\n", nome);
-                System.out.printf("Pelo radio você escuta gritos e grunidos graves, os gritos são de seu marido e os grunidos que não podem ser \n"
-                + "compriendidos são daqueles homens e mulheres que o capturaram.\n"
-                + "Obstinada, você corre para dentro da mata gritando pelo nome de dele.\n"
-                + "((%s)): ALEXANDRE ONDE VOCÊ ESTÁ!?\n", nome);
-                System.out.printf("E quanto mais corre para dentro da mata, mais os barulhos aumentam e você o encontra preso em uma árvore cercado pelos nativos.\n"
-                + "Neste momento Alexandre tenta se soltar enquanto os nativos vão em sua direção de maneira calma\n");
-                x = equacaoMedia(sorteado);
-                if (x==8){
-                  System.out.printf("você os atrai para longe dele, correndo para a direção da praia.\n"
-                + "((%s)): ALEXANDRE, SE SOLTA E VENHA PARA O AVIÃO!\n"
-                + "Com uma pedra que estava ao lado de Alexandre, ele consegue cortar as cordas e faz o que lhe foi dito.\n");
-                }
-                else {
-                  System.out.printf("Alexandre se solta e pede para que você vá para o avião.\n"
-                + "(Alexandre): Corra para o avião eu te encontro lá! \n"
-                + "Com uma pedra que estava ao seu lado, Alexandre consegue cortar as cordas e faz o que lhe foi dito.\n");
-                }
-
-  }
 
   // funcao para todo o desenrolar da historia
   static void historia() {
@@ -1061,13 +1553,52 @@ class Main {
           game = true;
           break;
         }
-
+        x = ato3H(nome, escolha, sorteado);
+         if (x == 8) {
+          soutGO();
+          game = true;
+          break;
+        }
+        x = atoFinalH(nome, escolha, sorteado);
+         if (x == 8) {
+          soutGO();
+          game = true;
+          break;
+        }else{
+          System.out.println("Obrigado por jogar.");
+          creditos();
+          game = true;
+          break;
+        }
       }
       // História do jogo para os jogadores que escolheram ser do sexo feminino
       else if (sexo.equalsIgnoreCase("Mulher")) {
         x = ato1M(nome, escolha, sorteado);
         if (x == 8) {
           soutGO();
+          game = true;
+          break;
+        } 
+        x = ato2M(nome, escolha, sorteado);
+        if (x == 8) {
+          soutGO();
+          game = true;
+          break;
+        }
+        x = ato3M(nome, escolha, sorteado);
+         if (x == 8) {
+          soutGO();
+          game = true;
+          break;
+        }
+        x = atoFinalM(nome, escolha, sorteado);
+         if (x == 8) {
+          soutGO();
+          game = true;
+          break;
+        }else{
+          System.out.println("Obrigado por jogar.");
+          creditos();
           game = true;
           break;
         }
